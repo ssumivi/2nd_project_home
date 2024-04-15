@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* review 영역 */
+.review {
+  position: relative;
+  display: block;
+}
+.sw-review {
+  width: 100%;
+  height: 100%;
+  padding: 150px 0;
+}
+.sw-review .fa-solid {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  font-size: 43px;
+}
+.swiper-wrapper {
+  width: 100%;
+  height: 490px;
+  overflow: hidden;
+}
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+/* big slide */
+.swreview-wrap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.sw-review-left {
+  display: block;
+  width: 40%;
+  height: 100%;
+  padding: 25px;
+  background-color: #f2f2f2;
+  border-radius: 35px 0 0 35px;
+}
+.sw-review-left img {
+  vertical-align: top;
+}
+.review-title {
+  display: inline-block;
+  padding: 5px 25px;
+  margin-bottom: 42px;
+  font-size: 1.625rem;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 35px;
+  background-color: #fff;
+}
+.review-info-title {
+  font-size: 1.625rem;
+  font-weight: 700;
+  margin-bottom: 34px;
+}
+.review-info-sub {
+  font-size: 1.25rem;
+  color: #3e4149;
+}
+.review-year {
+  margin-top: 150px;
+  color: #959595;
+}
+.swreview-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 100%;
+  padding: 65px;
+  background-color: #aad9bb;
+  border-radius: 0 35px 35px 0;
+}
+.swreview-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* small-slide */
+.swreview-mini-wrap {
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+}
+.srl-mini {
+  width: 100%;
+  height: 50%;
+  border-radius: 35px 35px 0 0;
+}
+.srr-mini {
+  width: 100%;
+  height: 50%;
+  border-radius: 0 0 35px 35px;
+}

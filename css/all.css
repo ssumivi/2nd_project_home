@@ -1,0 +1,23 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  color: #333;
+}
+
+/* 전체 section style */
+.inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 45px 0;
+}
+.section-title {
+  font-family: "GangwonEduPowerExtraBoldA";
+  font-size: 2.75rem;
+  font-weight: 700;
+}
