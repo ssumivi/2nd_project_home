@@ -4,10 +4,13 @@
   position: relative;
   display: block;
 }
+.review .inner {
+  height: 100vh;
+}
 .sw-review {
-  width: 100%;
+  width: auto;
   height: 100%;
-  padding: 150px 0;
+  padding: 150px 0 0;
 }
 .sw-review .fa-solid {
   position: absolute;
@@ -17,11 +20,10 @@
 }
 .swiper-wrapper {
   width: 100%;
-  height: 490px;
-  overflow: hidden;
+  height: 100%;
 }
-.swiper-slide {
-  width: 100%;
+.sw-review .swiper-slide {
+  width: 68% !important;
   height: 100%;
 }
 /* big slide */
@@ -43,28 +45,33 @@
 }
 .sw-review-left img {
   vertical-align: top;
+  padding-right: 15px;
 }
 .review-title {
   display: inline-block;
   padding: 5px 25px;
-  margin-bottom: 42px;
+  margin-bottom: 14%;
   font-size: 1.625rem;
   font-weight: 700;
   text-align: center;
-  border-radius: 35px;
+  border-radius: 15px;
   background-color: #fff;
 }
 .review-info-title {
   font-size: 1.625rem;
   font-weight: 700;
-  margin-bottom: 34px;
+  line-height: 1.24;
+  padding-left: 5%;
+  margin-bottom: 14%;
 }
 .review-info-sub {
+  padding-left: 5%;
   font-size: 1.25rem;
   color: #3e4149;
 }
 .review-year {
-  margin-top: 150px;
+  padding-left: 5%;
+  margin-top: 70%;
   color: #959595;
 }
 .swreview-right {
@@ -81,20 +88,34 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 35px;
 }
 /* small-slide */
+.sw-review .mini {
+  width: 30% !important;
+}
 .swreview-mini-wrap {
-  width: 50%;
+  width: 100%;
   height: 100%;
   flex-direction: column;
 }
 .srl-mini {
   width: 100%;
-  height: 50%;
+  height: 60%;
   border-radius: 35px 35px 0 0;
+}
+.srl-mini .review-year {
+  margin-top: 25%;
 }
 .srr-mini {
   width: 100%;
-  height: 50%;
+  height: 40%;
+  padding: 0;
   border-radius: 0 0 35px 35px;
+  overflow: hidden;
+}
+.srr-mini img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
 }
