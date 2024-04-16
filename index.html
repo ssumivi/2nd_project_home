@@ -36,9 +36,9 @@
     <meta property="og:description" content="노인 분들을 위한 쉽고 편리한 디지털 교육 플랫폼. 스마트폰 사용법부터 온라인 금융 관리까지, 생활에 필요한 다양한 교육 콘텐츠를 제공합니다." />
     <meta property="og:image" content="플랫폼 로고나 대표 이미지 URL" />
     <meta property="og:url" content="플랫폼의 웹사이트 주소" />
-    <!-- swiper css -->
+    <!-- swiper css cdn -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- fontawesome css -->
+    <!-- fontawesome css cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <!-- css -->
     <link rel="stylesheet" href="css/reset.css" />
@@ -47,52 +47,172 @@
     <link rel="stylesheet" href="css/cheun.css" />
     <link rel="stylesheet" href="css/sumin.css" />
     <link rel="stylesheet" href="css/seoa.css" />
-    <!-- 기본 js -->
+    <!-- 기본 js cdn -->
     <script src="js/html5shiv.js"></script>
     <!-- <script src="js/prefixfree.min.js"></script> -->
     <script src="js/respond.min.js"></script>
-    <!-- swiper js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- swiper js cdn -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- 개인 js -->
     <script src="js/cheun.js"></script>
     <script src="js/sumin.js"></script>
     <script src="js/seoa.js"></script>
   </head>
-  <body>
+  <body id="txtbox">
     <!-- 탑버튼 -->
-    <div class="topbtn"></div>
+    <div class="sidebtn">
+      <div class="hangulbtn">
+        <img src="images/topbtn/big.png" alt="빅" class="big" /> <br />
+        <img src="images/topbtn/middle.png" alt="중간" class="middle" /> <br />
+        <img src="images/topbtn/small.png" alt="작은" class="small" />
+      </div>
+      <br />
+      <br />
+      <div class="topbtn">
+        <img src="images/topbtn/topbtn.png" alt="탑버튼" />
+      </div>
+    </div>
     <div class="wrap">
       <!-- 채은영역 -->
-      <div class="header-wrap">
+      <div class="header-wrap .scrolled">
         <div class="header">
           <div class="logo">
             <img src="images/main_logo.png" alt="로고" />
           </div>
-          <div class="header-menu">
-            <ul>
-              <li>소개</li>
-              <li>수강신청</li>
-              <li>자원봉사신청</li>
-              <li>교육자료실</li>
-              <li>역량수준진단</li>
-              <li>고객센터</li>
-              <li>내정보</li>
-            </ul>
-          </div>
-          <div class="header-signup">
-            <div id="login-section">
-              <button id="login-button">로그인</button>
+          <div class="header-menuline">
+            <div class="header-menu">
+              <ul>
+                <li><a href="">소개</a></li>
+                <li class="hd-menu1"><a href="">수강신청</a></li>
+                <li><a href="">자원봉사신청</a></li>
+                <li><a href="">교육자료실</a></li>
+                <li><a href="">역량수준진단</a></li>
+                <li><a href="">고객센터</a></li>
+                <li><a href="">내정보</a></li>
+              </ul>
+              <ul>
+                <li class="hd-menu2"><a href="">교육과정찾기</a></li>
+              </ul>
             </div>
-            <div id="dashboard-section" style="display: none">
-              <div id="username-display"></div>
-              <button id="logout-button">로그아웃</button>
-            </div>
-            <div id="signup-section">
-              <button id="signup-button">회원가입</button>
+            <div class="header-signup">
+              <div id="login-section">
+                <button id="login-button">로그인</button>
+              </div>
+              <div id="dashboard-section" style="display: none">
+                <div id="username-display"></div>
+                <button id="logout-button">로그아웃</button>
+              </div>
+              <div id="signup-section">
+                <button id="signup-button">회원가입</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="visual-wrap inner">
+        <video src="images/video2.mp4" controls autoplay id="vs-video"></video>
+        <div class="visual-button">
+          <a href=""><button class="sugang">수강신청</button></a>
+          <a href=""><button class="bongsa">자원봉사등록</button></a>
+          <a href=""
+            ><button class="callcenter"><img src="images/phonepng.png" alt="콜센터이미지" id="callimg" />콜센터</button></a
+          >
+          <a href=""><button class="qna">Q&A</button></a>
+        </div>
+      </div>
+      <!-- 서아영역 -->
+      <section class="shortcut">
+        <div class="inner">
+          <p class="find">학습자 분들이 가장 많이 찾는</p>
+          <h2 class="section-title">바로가기</h2>
+          <ul class="shortcutbtn">
+            <li class="shortcutbtnli">
+              <div class="padding"><span class="shortbtnti">학습자 길잡이</span></div>
+              <img class="shortbtnimg" src="images/shortcut/학습자 길잡이.png" alt="학습자 길잡이" />
+            </li>
+            <li class="shortcutbtnli">
+              <div class="padding"><span class="shortbtnti">교육과정 찾기</span></div>
+              <img class="shortbtnimg" src="images/shortcut/교육과정 찾기.png" alt="교육과정 찾기" />
+            </li>
+            <li class="shortcutbtnli">
+              <div class="padding">
+                <span class="shortbtnti">자원봉사, 강사/서포터즈 신청하기</span>
+              </div>
+              <img class="shortbtnimg" src="images/shortcut/자원봉사.png" alt="자원봉사" />
+            </li>
+            <li class="shortcutbtnli">
+              <div class="padding"><span class="shortbtnti">키오스크/스마트기기/앱체험</span></div>
+              <img class="shortbtnimg" src="images/shortcut/키오스크.png" alt="키오스크" />
+            </li>
+            <li class="shortcutbtnli">
+              <div class="padding"><span class="shortbtnti">배움터 찾기</span></div>
+              <img class="shortbtnimg" src="images/shortcut/배움터.png" alt="배움터 찾기" />
+            </li>
+            <li class="shortcutbtnli">
+              <div class="padding"><span class="shortbtnti">역량수준 진단하기</span></div>
+              <img class="shortbtnimg" src="images/shortcut/역량수준 진단.png" alt="역량수준 진단" />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="recommend">
+        <div class="inner">
+          <p class="find">학습자 분들이 가장 많이 찾는</p>
+          <h2 class="section-title">추천 길잡이 과정</h2>
+          <a href="#" class="morebtn"
+            ><img src="images/recommend/버튼.png" alt="버튼" />
+            <p class="recommendmore">과정 더보기</p></a
+          >
+          <ul>
+            <li>
+              <img src="images/recommend/무인결제대.png" alt="무인결제대" id="changeableImage" class="image-size" />
+              <div class="gangbox">
+                <div class="subtit">
+                  <span class="offline">오프라인</span>
+                  <span class="gangboxtit">디지털로 신 세대 따라잡기</span>
+                </div>
+                <p class="ksas">무인 결제대(키오스크) 사용하기</p>
+                <p class="ksas2">상점이나 물건 구매를 할 때, 결제수단을 원활하게 사용하기 위한 무인 결제대(키오스크) 사용법을 알려줍니다.</p>
+              </div>
+            </li>
+            <li>
+              <img src="images/recommend/앱사용.png" alt="앱사용" id="changeableImage2" class="image-size" />
+              <div class="gangbox">
+                <div class="subtit">
+                  <span class="offline">오프라인</span>
+                  <span class="gangboxtit">디지털로 신 세대 따라잡기</span>
+                </div>
+                <p class="ksas">생활 편의를 위한 앱 사용하기</p>
+                <p class="ksas2">생활 편의를 위한 앱 사용법, 교통 앱 이용 방법 등을 알려줍니다.</p>
+              </div>
+            </li>
+            <li>
+              <img src="images/recommend/인공지능.png" alt="인공지능" id="changeableImage3" class="image-size" />
+              <div class="gangbox" href="#">
+                <div class="subtit">
+                  <span class="online">온라인</span>
+                  <span class="gangboxtit">함께하는 스마트 세상</span>
+                </div>
+                <p class="ksas">인공지능(AI) 사용법</p>
+                <p class="ksas2">인공지능 기술과 정보찾기 능력을 키워주고, 편리하게 사용할 수 있도록 돕는 교육입니다.</p>
+              </div>
+            </li>
+            <li>
+              <img src="images/recommend/스마트폰.png" alt="스마트폰" id="changeableImage4" class="image-size" />
+              <div class="gangbox">
+                <div class="subtit">
+                  <span class="online">온라인</span>
+                  <span class="gangboxtit">함께하는 스마트 세상</span>
+                </div>
+                <p class="ksas">스마트폰 활용 교육</p>
+                <p class="ksas2">IT기술을 소외됨 없이 누릴 수 있게 돕는 안드로이드 스마트폰 교육입니다.</p>
+              </div>
+            </li>
+          </ul>
+          <p class="card">* 카드를 클릭하면 자세한 정보 확인이 가능합니다.</p>
+        </div>
+      </section>
       <!-- 서아영역 -->
       <!-- 수민영역 -->
       <!-- 수강생 이야기 (review) 영역 -->
@@ -108,5 +228,29 @@
         </div>
       </section>
     </div>
+    <script>
+      $(document).ready(function () {
+        let currentFontSize = parseFloat($("html").css("font-size")); // 현재 html의 폰트 크기를 파싱
+
+        $(".big").click(function () {
+          if (currentFontSize < 21) {
+            currentFontSize++; // 폰트 크기를 1px 증가
+          }
+          $("html").css("font-size", currentFontSize + "px");
+        });
+
+        $(".middle").click(function () {
+          currentFontSize = 16; // 폰트 크기를 22px로 설정
+          $("html").css("font-size", currentFontSize + "px");
+        });
+
+        $(".small").click(function () {
+          if (currentFontSize > 11) {
+            currentFontSize--; // 폰트 크기를 1px 감소
+          }
+          $("html").css("font-size", currentFontSize + "px");
+        });
+      });
+    </script>
   </body>
 </html>
