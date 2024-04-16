@@ -1,4 +1,6 @@
 @charset "utf-8";
+@import url(font.css);
+@import url(all.css);
 /* review 영역 */
 .review {
   position: relative;
@@ -22,12 +24,13 @@
 .sw-review .swiper-wrapper {
   width: 100%;
   height: 100%;
+  gap: 15px;
   transition-timing-function: linear;
 }
 .sw-review .swiper-slide {
   width: 68%;
   height: 100%;
-  margin-right: 15px;
+  /* margin-right: 15px; */
 }
 /* big slide */
 .swreview-wrap {
@@ -102,7 +105,7 @@
   border-radius: 35px;
 }
 /* small-slide */
-.sw-review .mini{
+.sw-review .mini {
   width: 30%;
 }
 .swreview-mini-wrap {
