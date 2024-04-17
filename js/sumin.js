@@ -101,9 +101,7 @@ window.addEventListener("load", function () {
     slidesPerView: "auto",
     loopAdditionalSlides: 1,
     loopedSlides: 1,
-    loop: {
-      delay: 0,
-    },
+    loop: true,
     autoplay: true,
     speed: 2500,
     // freemode: true,
@@ -163,10 +161,10 @@ window.addEventListener("load", function () {
   function showNotice() {
     let html = "";
     NOTICE_ARR.slice(0, 4).forEach(function (item, index) {
-      let newLabel = ''; // 초기값은 빈 문자열로 설정
-        if (index === 0 || index === 1) { 
-            newLabel = '<span class="notice-new">신규</span>';
-        }
+      let newLabel = ""; // 초기값은 빈 문자열로 설정
+      if (index === 0 || index === 1) {
+        newLabel = '<span class="notice-new">신규</span>';
+      }
       let tag = `
       <li class="noti-list-li">
         <a href="#" class="noti-list-pr">${item.title}</a>
