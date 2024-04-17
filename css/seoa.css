@@ -13,6 +13,7 @@ a {
   position: fixed;
   bottom: -10%;
   left: 93%;
+  z-index: 9999;
 }
 .hangulbtn img {
   width: 10%;
@@ -94,7 +95,7 @@ a {
   transform: scale(1.1); /* 원래 크기보다 10% 더 크게 */
 }
 .shortcutbtn > li > .padding > .shortbtnti {
-  z-index: 9999;
+  z-index: 99;
   font-family: "GangwonEduPowerExtraBoldA";
   font-size: 1.4rem;
   font-weight: 600;
@@ -157,7 +158,7 @@ a {
   padding: 7%;
   cursor: pointer;
   /* background-color: aquamarine; */
-  min-width: 337px;
+  max-width: 346px;
   max-height: 217px;
   overflow-y: auto;
   overflow-x: auto;

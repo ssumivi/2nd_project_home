@@ -5,6 +5,7 @@
 .review {
   position: relative;
   display: block;
+  padding: 7% 0;
 }
 .review .inner {
   height: 100vh;
@@ -31,6 +32,7 @@
   width: 68%;
   height: 100%;
   /* margin-right: 15px; */
+  transition-timing-function: linear;
 }
 /* big slide */
 .swreview-wrap {
@@ -141,19 +143,19 @@
 .notice {
   position: relative;
   display: block;
+  padding: 7% 0;
 }
 .notice .inner {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
-  padding: 7% 0;
 }
 .notice-box {
   position: relative;
   display: block;
   width: 60%;
-  height: 25vw;
+  height: 25.45vw;
   background-color: #f2f2f2;
   border-radius: 35px;
   padding: 35px;
@@ -187,7 +189,7 @@
   left: -70px;
   width: 45px;
   height: 23px;
-  background: url("../images/recommend/버튼.png") no-repeat center / cover;
+  background: url("../images/recommend/morebtn.png") no-repeat center / cover;
   transition: all 0.6s;
 }
 .notice-list {
@@ -204,6 +206,7 @@
   padding-top: 35px;
 }
 .noti-list-pr {
+  position: relative;
   font-size: 1.875rem;
   /* 줄바꿈 방지 */
   white-space: nowrap;
@@ -214,6 +217,13 @@
   /* 상대너비 설정 */
   max-width: 60%;
   width: 50%;
+  transition: all 0.3s;
+}
+.notice-new {
+  color: #fff;
+  background-color: #80bcbd;
+  padding: 5px 10px;
+  border-radius: 35px;
 }
 .noti-list-pr:hover {
   text-decoration: 1.5px underline;
@@ -227,7 +237,7 @@
 /* cs center field */
 .cs-center-box {
   width: 40%;
-  height: 25vw;
+  height: 25.45vw;
   position: relative;
   display: block;
   border-radius: 35px;
@@ -287,6 +297,15 @@
   padding: 15px 0;
   border-radius: 15px;
 }
+.cs-quick-menu-box a img {
+  transition: all 0.3s;
+}
+.cs-quick-menu-box a:hover img {
+  filter: drop-shadow(0 0 5px #aad9bb);
+}
+.cs-quick-menu-box a:hover .quick-menu-title {
+  font-weight: 700;
+}
 .cs-quick-menu-box a .quick-menu-title {
   font-size: 1.125rem;
   font-weight: 500;
@@ -295,7 +314,7 @@
 /* 하단 footer영역 */
 .footer {
   width: 100%;
-  height: 330px;
+  height: 320px;
   position: relative;
   display: block;
   background-color: #80bcbd;

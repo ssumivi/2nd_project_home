@@ -1,6 +1,6 @@
 // =============================================================
 document.addEventListener("DOMContentLoaded", function () {
-  const originalImageSrc = "images/recommend/무인결제대.png"; // 원본 이미지 경로
+  const originalImageSrc = "images/recommend/kiosk0.png"; // 원본 이미지 경로
   const hoverImageSrc = "images/recommend/kiosk.png"; // 호버 시 이미지 경로
 
   const imageElement = document.getElementById("changeableImage");
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 document.addEventListener("DOMContentLoaded", function () {
-  const originalImageSrc = "images/recommend/앱사용.png"; // 원본 이미지 경로
+  const originalImageSrc = "images/recommend/app0.png"; // 원본 이미지 경로
   const hoverImageSrc = "images/recommend/app.png"; // 호버 시 이미지 경로
 
   const imageElement = document.getElementById("changeableImage2");
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 document.addEventListener("DOMContentLoaded", function () {
-  const originalImageSrc = "images/recommend/인공지능.png"; // 원본 이미지 경로
+  const originalImageSrc = "images/recommend/AI0.png"; // 원본 이미지 경로
   const hoverImageSrc = "images/recommend/grandma.png"; // 호버 시 이미지 경로
 
   const imageElement = document.getElementById("changeableImage3");
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 document.addEventListener("DOMContentLoaded", function () {
-  const originalImageSrc = "images/recommend/스마트폰.png"; // 원본 이미지 경로
+  const originalImageSrc = "images/recommend/smartphone0.png"; // 원본 이미지 경로
   const hoverImageSrc = "images/recommend/smartphone.png"; // 호버 시 이미지 경로
 
   const imageElement = document.getElementById("changeableImage4");
@@ -75,3 +75,4 @@ $(document).ready(function () {
     ); // "slow"는 애니메이션 속도를 의미하며, 숫자(밀리초)로도 지정할 수 있습니다.
   });
 });
+// =============================================

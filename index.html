@@ -40,13 +40,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- fontawesome css cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <!-- css -->
+    <!-- 기본css -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/all.css" />
     <link rel="stylesheet" href="css/font.css" />
+    <!-- 개인 css -->
     <link rel="stylesheet" href="css/cheun.css" />
     <link rel="stylesheet" href="css/sumin.css" />
     <link rel="stylesheet" href="css/seoa.css" />
+    <link rel="stylesheet" href="css/seoa_responsive.css" />
     <!-- swiper js cdn -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- 기본 js cdn -->
@@ -112,7 +114,7 @@
         </div>
       </div>
       <div class="visual-wrap inner">
-        <video src="images/video2.mp4" controls autoplay id="vs-video"></video>
+        <video src="images/video2.mp4" controls autoplay muted id="vs-video"></video>
         <div class="visual-button">
           <a href=""><button class="sugang">수강신청</button></a>
           <a href=""><button class="bongsa">자원봉사등록</button></a>
@@ -130,29 +132,29 @@
           <ul class="shortcutbtn">
             <li class="shortcutbtnli">
               <div class="padding"><span class="shortbtnti">학습자 길잡이</span></div>
-              <img class="shortbtnimg" src="images/shortcut/학습자 길잡이.png" alt="학습자 길잡이" />
+              <img class="shortbtnimg" src="images/shortcut/giljab.png" alt="학습자 길잡이" />
             </li>
             <li class="shortcutbtnli">
               <div class="padding"><span class="shortbtnti">교육과정 찾기</span></div>
-              <img class="shortbtnimg" src="images/shortcut/교육과정 찾기.png" alt="교육과정 찾기" />
+              <img class="shortbtnimg" src="images/shortcut/gyouk.png" alt="교육과정 찾기" />
             </li>
             <li class="shortcutbtnli">
               <div class="padding">
                 <span class="shortbtnti">자원봉사, 강사/서포터즈 신청하기</span>
               </div>
-              <img class="shortbtnimg" src="images/shortcut/자원봉사.png" alt="자원봉사" />
+              <img class="shortbtnimg" src="images/shortcut/jawon.png" alt="자원봉사" />
             </li>
             <li class="shortcutbtnli">
               <div class="padding"><span class="shortbtnti">키오스크/스마트기기/앱체험</span></div>
-              <img class="shortbtnimg" src="images/shortcut/키오스크.png" alt="키오스크" />
+              <img class="shortbtnimg" src="images/shortcut/kiosk.png" alt="키오스크" />
             </li>
             <li class="shortcutbtnli">
               <div class="padding"><span class="shortbtnti">배움터 찾기</span></div>
-              <img class="shortbtnimg" src="images/shortcut/배움터.png" alt="배움터 찾기" />
+              <img class="shortbtnimg" src="images/shortcut/baeum.png" alt="배움터 찾기" />
             </li>
             <li class="shortcutbtnli">
               <div class="padding"><span class="shortbtnti">역량수준 진단하기</span></div>
-              <img class="shortbtnimg" src="images/shortcut/역량수준 진단.png" alt="역량수준 진단" />
+              <img class="shortbtnimg" src="images/shortcut/sujun.png" alt="역량수준 진단" />
             </li>
           </ul>
         </div>
@@ -162,12 +164,12 @@
           <p class="find">학습자 분들이 가장 많이 찾는</p>
           <h2 class="section-title">추천 길잡이 과정</h2>
           <a href="#" class="morebtn"
-            ><img src="images/recommend/버튼.png" alt="버튼" />
+            ><img src="images/recommend/morebtn.png" alt="버튼" />
             <p class="recommendmore">과정 더보기</p></a
           >
           <ul>
             <li>
-              <img src="images/recommend/무인결제대.png" alt="무인결제대" id="changeableImage" class="image-size" />
+              <img src="images/recommend/kiosk0.png" alt="무인결제대" id="changeableImage" class="image-size" />
               <div class="gangbox">
                 <div class="subtit">
                   <span class="offline">오프라인</span>
@@ -178,7 +180,7 @@
               </div>
             </li>
             <li>
-              <img src="images/recommend/앱사용.png" alt="앱사용" id="changeableImage2" class="image-size" />
+              <img src="images/recommend/app0.png" alt="앱사용" id="changeableImage2" class="image-size" />
               <div class="gangbox">
                 <div class="subtit">
                   <span class="offline">오프라인</span>
@@ -189,7 +191,7 @@
               </div>
             </li>
             <li>
-              <img src="images/recommend/인공지능.png" alt="인공지능" id="changeableImage3" class="image-size" />
+              <img src="images/recommend/AI0.png" alt="인공지능" id="changeableImage3" class="image-size" />
               <div class="gangbox" href="#">
                 <div class="subtit">
                   <span class="online">온라인</span>
@@ -200,7 +202,7 @@
               </div>
             </li>
             <li>
-              <img src="images/recommend/스마트폰.png" alt="스마트폰" id="changeableImage4" class="image-size" />
+              <img src="images/recommend/smartphone0.png" alt="스마트폰" id="changeableImage4" class="image-size" />
               <div class="gangbox">
                 <div class="subtit">
                   <span class="online">온라인</span>
@@ -240,6 +242,7 @@
             </div>
             <ul class="notice-list" id="data-notice">
               <!-- json 데이터 출력 -->
+             
             </ul>
           </div>
           <div class="cs-center-box">
