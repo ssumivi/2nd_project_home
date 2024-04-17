@@ -13,6 +13,15 @@ window.addEventListener("load", function () {
       } else {
         console.error("No review data found.");
       }
+      return data;
+    })
+    .then(function (data) {
+      if (data && data.notice && data.notice.length > 0) {
+        NOTICE_ARR = data.notice;
+        showNotice();
+      } else {
+        console.error("No review data found.");
+      }
     })
     .catch(function (error) {
       console.error("Fetch error:", error);
@@ -92,56 +101,87 @@ window.addEventListener("load", function () {
     slidesPerView: "auto",
     loopAdditionalSlides: 1,
     loopedSlides: 9,
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: true,
-      speed: 8e3,
-    },
+    // autoplay: {
+    //   delay: 0,
+    //   disableOnInteraction: true,
+    // },
     loop: true,
-    speed: 8e3,
+    speed: 2500,
     freemode: true,
     observer: true,
     observeParents: true,
+    on: {
+      slideChangeTransitionEnd: function () {
+        if (this.activeIndex % 2 === 1) {
+          document.getElementById("swtext1").style.display = "none";
+          document.getElementById("swtext2").style.display = "block";
+        } else {
+          document.getElementById("swtext1").style.display = "block";
+          document.getElementById("swtext2").style.display = "none";
+        }
+      },
+    },
   });
 
-  const reviewArea = document.querySelector(".sw-review");
   const stopBtn = document.querySelector("#stop_btn");
-  stopBtn.addEventListener("click", function () {
-    swReview.autoplay.stop();
-  });
-  reviewArea.addEventListener("mouseenter", function () {
+  let isPlaying = false; // 플레이 상태 추적
+
+  // 클릭 이벤트 핸들러
+  function clickHandler() {
+    if (isPlaying) {
+      swReview.autoplay.stop();
+      isPlaying = false;
+      stopBtn.classList.remove("fa-circle-pause");
+      stopBtn.classList.add("fa-circle-play");
+    } else {
+      swReview.autoplay.start();
+      isPlaying = true;
+      stopBtn.classList.add("fa-circle-pause");
+      stopBtn.classList.remove("fa-circle-play");
+    }
+  }
+
+  stopBtn.addEventListener("click", clickHandler);
+
+  // 마우스 진입 이벤트 핸들러
+  function mouseEnterHandler() {
     stopBtn.classList.remove("fa-circle-pause");
     stopBtn.classList.add("fa-circle-play");
     swReview.autoplay.stop();
-    swReview.params.autoplay.speed = 8e3;
-    swReview.params.speed = 8e3;
-  });
+    swReview.speed = 2500;
+  }
 
-  reviewArea.addEventListener("mouseleave", function () {
+  // 마우스 이탈 이벤트 핸들러
+  function mouseLeaveHandler() {
     stopBtn.classList.remove("fa-circle-play");
     stopBtn.classList.add("fa-circle-pause");
-
     swReview.autoplay.start();
+  }
 
-    swReview.params.autoplay.speed = 800;
-    swReview.params.speed = 800;
+  // 클릭 이벤트가 우선되도록 설정
+  stopBtn.addEventListener("mouseenter", function () {
+    stopBtn.removeEventListener("mouseenter", mouseEnterHandler);
+    stopBtn.removeEventListener("mouseleave", mouseLeaveHandler);
   });
-
-  swReview.el.addEventListener("mouseenter", function () {
-    stopBtn.classList.remove("fa-circle-pause");
-    stopBtn.classList.add("fa-circle-play");
-    swReview.autoplay.stop();
-    swReview.params.autoplay.speed = 8e3;
-    swReview.params.speed = 8e3;
+  stopBtn.addEventListener("mouseleave", function () {
+    stopBtn.addEventListener("mouseenter", mouseEnterHandler);
+    stopBtn.addEventListener("mouseleave", mouseLeaveHandler);
   });
-
-  swReview.el.addEventListener("mouseleave", function () {
-    stopBtn.classList.remove("fa-circle-play");
-    stopBtn.classList.add("fa-circle-pause");
-
-    swReview.autoplay.start();
-
-    swReview.params.autoplay.speed = 800;
-    swReview.params.speed = 800;
-  });
+  //============ 수강생 이야기 end ====================
+  //notice area
+  let NOTICE_ARR;
+  let noticeTag = this.document.getElementById("data-notice");
+  function showNotice() {
+    let html = "";
+    NOTICE_ARR.slice(0, 4).forEach(function (item) {
+      let tag = `
+      <li class="noti-list-li">
+        <a href="#" class="noti-list-pr">${item.title}</a>
+        <span class="noti-date">${item.date}</span>
+      </li>
+      `;
+      html += tag;
+    });
+    noticeTag.innerHTML = html;
+  }
 });
