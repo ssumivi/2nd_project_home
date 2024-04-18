@@ -59,12 +59,15 @@ $(document).ready(function () {
         slidesPerView: "auto",
         spaceBetween: 15,
         loopAdditionalSlides: 1,
+        parallax: true,
+        // centeredSlides: true,
+        slidesPerGroupAuto: true,
         loop: true,
         autoplay: {
           delay: 0,
           disableOnInteraction: false,
         },
-        speed: 2300,
+        speed: 4500,
         // centeredSlides: true,
         allowMouseEvents: true, // 사용자가 마우스로 스와이프 가능
         noSwiping: true, // 사용자 스와이프에 대해 속도 속성을 무시
