@@ -71,8 +71,6 @@ $(document).ready(function () {
         noSwipingClass: "swiper-no-swiping", // 사용자 스와이프에 대해 속도 속성을 무시할 클래스 지정
       });
 
-
-     
       // autoplay click event
       $("#stop_btn").on("click", function () {
         if (swReview.autoplay.running) {
@@ -151,8 +149,7 @@ $(document).ready(function () {
         </div>
         `;
     html += firstSlideTag;
-     // 특정 슬라이드의 autoplay 속성 변경
-     $("swiper-wrapper .first").attr("data-autoplay", 5200);
+
 
     // 나머지 슬라이드 처리
     // REVIEW_ARR 배열을 순회하면서 데이터를 처리
