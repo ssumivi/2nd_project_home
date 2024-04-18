@@ -65,7 +65,7 @@ $(document).ready(function () {
           disableOnInteraction: false,
         },
         speed: 2300,
-        centeredSlides: true,
+        // centeredSlides: true,
         allowMouseEvents: true, // 사용자가 마우스로 스와이프 가능
         noSwiping: true, // 사용자 스와이프에 대해 속도 속성을 무시
         noSwipingClass: "swiper-no-swiping", // 사용자 스와이프에 대해 속도 속성을 무시할 클래스 지정

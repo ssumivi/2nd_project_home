@@ -27,7 +27,7 @@
   user-select: none;
 }
 .sw-review .swiper-slide {
-  width: 62.5%;
+  width: 62.5% !important;
   height: 100%;
 }
 /* big slide */
@@ -103,7 +103,7 @@
 }
 /* small-slide */
 .sw-review .mini {
-  width: calc(100% / 3.5);
+  width: calc(100% / 3.5) !important;
 }
 .swreview-mini-wrap {
   width: 100%;
