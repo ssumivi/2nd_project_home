@@ -70,6 +70,15 @@ $(document).ready(function () {
         noSwiping: true, // 사용자 스와이프에 대해 속도 속성을 무시
         noSwipingClass: "swiper-no-swiping", // 사용자 스와이프에 대해 속도 속성을 무시할 클래스 지정
       });
+      // 각 슬라이드의 너비와 autoplay 속도를 정의합니다.
+      var baseAutoplaySpeed = 3000; // 기본 autoplay 속도 (밀리초 단위)
+
+      $(".sw-review .swiper-slide").each(function () {
+        var slideWidth = $(this).width(); // 슬라이드의 너비를 픽셀 단위로 가져옵니다.
+        var autoplaySpeed = (baseAutoplaySpeed / slideWidth) * 100; // 슬라이드의 너비에 따라 계산된 autoplay 속도
+        // 슬라이드에 autoplay 속도를 적용하는 코드를 작성합니다.
+        swReview.autoplay.speed = autoplaySpeed;
+      });
 
       // autoplay click event
       $("#stop_btn").on("click", function () {
@@ -149,7 +158,6 @@ $(document).ready(function () {
         </div>
         `;
     html += firstSlideTag;
-
 
     // 나머지 슬라이드 처리
     // REVIEW_ARR 배열을 순회하면서 데이터를 처리
