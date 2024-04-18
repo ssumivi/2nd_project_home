@@ -59,37 +59,28 @@ $(document).ready(function () {
         slidesPerView: "auto",
         spaceBetween: 15,
         loopAdditionalSlides: 1,
-        parallax: true,
-        // centeredSlides: true,
+        // parallax: true,
         slidesPerGroupAuto: true,
         loop: true,
         autoplay: {
           delay: 0,
           disableOnInteraction: false,
+          pauseOnMouseEnter: true,
         },
-        speed: 4500,
+        speed: 5000,
         // centeredSlides: true,
         allowMouseEvents: true, // 사용자가 마우스로 스와이프 가능
         noSwiping: true, // 사용자 스와이프에 대해 속도 속성을 무시
         noSwipingClass: "swiper-no-swiping", // 사용자 스와이프에 대해 속도 속성을 무시할 클래스 지정
       });
-      // 각 슬라이드의 너비와 autoplay 속도를 정의합니다.
-      var baseAutoplaySpeed = 3000; // 기본 autoplay 속도 (밀리초 단위)
-
-      $(".sw-review .swiper-slide").each(function () {
-        var slideWidth = $(this).width(); // 슬라이드의 너비를 픽셀 단위로 가져옵니다.
-        var autoplaySpeed = (baseAutoplaySpeed / slideWidth) * 100; // 슬라이드의 너비에 따라 계산된 autoplay 속도
-        // 슬라이드에 autoplay 속도를 적용하는 코드를 작성합니다.
-        swReview.autoplay.speed = autoplaySpeed;
-      });
 
       // autoplay click event
       $("#stop_btn").on("click", function () {
         if (swReview.autoplay.running) {
-          swReview.autoplay.stop();
+          swReview.handleTogglePlay();
           $(this).removeClass("fa-circle-pause").addClass("fa-circle-play");
         } else {
-          swReview.autoplay.start();
+          swReview.handleTogglePlay();
           $(this).removeClass("fa-circle-play").addClass("fa-circle-pause");
         }
       });
@@ -99,28 +90,29 @@ $(document).ready(function () {
 
       $(".swiper-wrapper").on("mouseenter", function () {
         if (!isClickEventOccurred) {
-          swReview.autoplay.stop();
+          swReview.stopAutoplay();
           $("#stop_btn").removeClass("fa-circle-pause").addClass("fa-circle-play");
         }
       });
 
       $(".swiper-wrapper").on("mouseleave", function () {
         if (!isClickEventOccurred) {
-          swReview.autoplay.start();
+          swReview.startAutoplay();
           $("#stop_btn").removeClass("fa-circle-play").addClass("fa-circle-pause");
         }
       });
+      
 
       // 클릭 이벤트가 발생한 후에는 마우스 진입/이탈 이벤트가 작동하도록 설정
       $("#stop_btn").on("click", function () {
         if (!isClickEventOccurred) {
           isClickEventOccurred = true;
           // autoplay 멈추기
-          swReview.autoplay.stop();
+          swReview.stopAutoplay();
         } else {
           isClickEventOccurred = false;
           // autoplay 다시 시작
-          swReview.autoplay.start();
+          swReview.startAutoplay();
         }
       });
 
@@ -131,7 +123,50 @@ $(document).ready(function () {
           // 원하는 동작을 추가하세요
         }
       });
+
+      let duration = 0;
+      let distanceRatio = 0;
+      let clickable = true;
+
+      const stopAutoplay = () => {
+        swReview.setTranslate(swReview.getTranslate());
+
+        distanceRatio = Math.abs((swReview.width * swReview.activeIndex + swReview.getTranslate()) / swReview.width);
+
+        duration = swReview.params.speed * distanceRatio;
+        swReview.autoplay.stop();
+      };
+
+      // let startTimer;
+
+      const startAutoplay = () => {
+        swReview.autoplay.start();
+      };
+
+      const isPlaying = true;
+
+      const handleTogglePlay = () => {
+        if (!clickable) return;
+        clickable = false;
+
+        if (isPlaying) stopAutoplay();
+        else {
+          const distance = swReview.width * swReview.activeIndex + swReview.getTranslate();
+          duration = distance !== 0 ? duration : 0;
+          swReview.slideTo(swReview.activeIndex, duration);
+          startAutoplay();
+        }
+        // isPlaying = !isPlaying;
+        setTimeout(() => {
+          clickable = true;
+        }, 100);
+      };
+
+      swReview.stopAutoplay = stopAutoplay;
+      swReview.startAutoplay = startAutoplay;
+      swReview.handleTogglePlay = handleTogglePlay;
     },
+
     error: function (status, error) {
       console.log("오류 :", status, error);
     },
