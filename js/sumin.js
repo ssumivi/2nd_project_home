@@ -59,7 +59,6 @@ $(document).ready(function () {
         slidesPerView: "auto",
         spaceBetween: 15,
         loopAdditionalSlides: 1,
-        // parallax: true,
         slidesPerGroupAuto: true,
         loop: true,
         autoplay: {
@@ -101,7 +100,6 @@ $(document).ready(function () {
           $("#stop_btn").removeClass("fa-circle-play").addClass("fa-circle-pause");
         }
       });
-      
 
       // 클릭 이벤트가 발생한 후에는 마우스 진입/이탈 이벤트가 작동하도록 설정
       $("#stop_btn").on("click", function () {
@@ -137,10 +135,11 @@ $(document).ready(function () {
         swReview.autoplay.stop();
       };
 
-      // let startTimer;
+      let startTimer;
 
       const startAutoplay = () => {
-        swReview.autoplay.start();
+        if (startTimer) clearTimeout(startTimer);
+        startTimer = swReview.autoplay.start();
       };
 
       const isPlaying = true;
@@ -159,7 +158,7 @@ $(document).ready(function () {
         // isPlaying = !isPlaying;
         setTimeout(() => {
           clickable = true;
-        }, 100);
+        }, 200);
       };
 
       swReview.stopAutoplay = stopAutoplay;
