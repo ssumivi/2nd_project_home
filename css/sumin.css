@@ -9,10 +9,9 @@
 }
 .review .inner {
   height: 100vh;
-  padding: 7% 0;
+  padding: 6% 0;
 }
 .sw-review {
-  width: 100%;
   height: 100%;
   padding: 10% 0 0;
 }
@@ -23,15 +22,13 @@
   font-size: 43px;
 }
 .sw-review .swiper-wrapper {
-  width: 100%;
   height: 100%;
-  gap: 15px;
   transition-timing-function: linear;
+  user-select: none;
 }
 .sw-review .swiper-slide {
-  width: 68%;
+  width: 62.5% !important;
   height: 100%;
-  /* margin-right: 15px; */
 }
 /* big slide */
 .swreview-wrap {
@@ -72,13 +69,10 @@
   padding-left: 5%;
   margin-bottom: 14%;
   /* 줄바꿈 방지 */
-  white-space: nowrap;
-  /* 말줄임 표시 (...) 추가 */
-  text-overflow: ellipsis;
-  /* 넘치는 거 방지 */
-  overflow: hidden;
+  white-space: wrap;
   /* 상대너비 설정 */
   max-width: 100%;
+  overflow: hidden;
 }
 .review-info-sub {
   padding-left: 5%;
@@ -109,7 +103,7 @@
 }
 /* small-slide */
 .sw-review .mini {
-  width: 30%;
+  width: calc(100% / 3.5) !important;
 }
 .swreview-mini-wrap {
   width: 100%;
@@ -123,6 +117,21 @@
 }
 .srl-mini .review-year {
   margin-top: 25%;
+}
+.mini .review-info-title {
+  font-size: 1.625rem;
+  font-weight: 700;
+  line-height: 1.24;
+  padding-left: 5%;
+  margin-bottom: 14%;
+  /* 줄바꿈 방지 */
+  white-space: nowrap;
+  /* 말줄임 표시 (...) 추가 */
+  text-overflow: ellipsis;
+  /* 넘치는 거 방지 */
+  overflow: hidden;
+  /* 상대너비 설정 */
+  max-width: 100%;
 }
 .srr-mini {
   width: 100%;

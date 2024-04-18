@@ -57,30 +57,31 @@ $(document).ready(function () {
       // Swiper 초기화
       let swReview = new Swiper(".sw-review", {
         slidesPerView: "auto",
+        spaceBetween: 15,
         loopAdditionalSlides: 1,
         loop: true,
         autoplay: {
           delay: 0,
+          disableOnInteraction: false,
         },
-        speed: 6700,
+        speed: 2300,
+        centeredSlides: true,
         allowMouseEvents: true, // 사용자가 마우스로 스와이프 가능
         noSwiping: true, // 사용자 스와이프에 대해 속도 속성을 무시
         noSwipingClass: "swiper-no-swiping", // 사용자 스와이프에 대해 속도 속성을 무시할 클래스 지정
       });
 
+
+     
       // autoplay click event
       $("#stop_btn").on("click", function () {
         if (swReview.autoplay.running) {
           swReview.autoplay.stop();
-
           $(this).removeClass("fa-circle-pause").addClass("fa-circle-play");
         } else {
           swReview.autoplay.start();
           $(this).removeClass("fa-circle-play").addClass("fa-circle-pause");
         }
-
-        // 스와이퍼 즉시 멈추기
-        swReview.autoplay.stop();
       });
 
       // autoplay stop on mouse enter
@@ -102,11 +103,23 @@ $(document).ready(function () {
 
       // 클릭 이벤트가 발생한 후에는 마우스 진입/이탈 이벤트가 작동하도록 설정
       $("#stop_btn").on("click", function () {
-        isClickEventOccurred = true;
+        if (!isClickEventOccurred) {
+          isClickEventOccurred = true;
+          // autoplay 멈추기
+          swReview.autoplay.stop();
+        } else {
+          isClickEventOccurred = false;
+          // autoplay 다시 시작
+          swReview.autoplay.start();
+        }
       });
 
       $(".swiper-wrapper").on("mouseenter mouseleave", function () {
-        isClickEventOccurred = false;
+        if (!isClickEventOccurred) {
+          // 클릭 이벤트가 발생하지 않은 경우에만 마우스 진입/이탈 이벤트 작동
+          // 만약 클릭 이벤트가 발생했다면 마우스 이벤트를 무시
+          // 원하는 동작을 추가하세요
+        }
       });
     },
     error: function (status, error) {
@@ -119,30 +132,31 @@ $(document).ready(function () {
     var html = "";
 
     // 첫 번째 슬라이드 처리
-    var firstSlideTag = `
-      <div class="swiper-slide">
-        <a href="#" class="swreview-wrap">
-          <div class="sw-review-left">
-            <img src="images/emoji_memo_.png" alt="이모티콘" />
-            <h2 class="review-title">수강 후기</h2>
-            <p class="review-info-title">
-              이제는 손녀에게 전화말고<br />
-              카톡 보내요
-            </p>
-            <p class="review-info-sub">수강생 최복희 님의 수강 후기</p>
-            <p class="review-year">스마트 길잡이 1기</p>
-          </div>
-          <div class="swreview-right">
-            <img src="images/review1.jpg" alt="리뷰1" />
-          </div>
-        </a>
-      </div>
-    `;
+    let firstSlideTag = `
+        <div class="swiper-slide first">
+          <a href="${REVIEW_ARR[0].href}" class="swreview-wrap">
+            <div class="sw-review-left">
+              <img src="${REVIEW_ARR[0].emojiSrc}" alt="이모티콘" />
+              <h2 class="review-title">${REVIEW_ARR[0].title}</h2>
+              <p class="review-info-title">
+                ${REVIEW_ARR[0].info_title}
+              </p>
+              <p class="review-info-sub">${REVIEW_ARR[0].review_info_sub}</p>
+              <p class="review-year">${REVIEW_ARR[0].year}</p>
+            </div>
+            <div class="swreview-right">
+              <img src="${REVIEW_ARR[0].imgSrc}" alt="리뷰1" />
+            </div>
+          </a>
+        </div>
+        `;
     html += firstSlideTag;
+     // 특정 슬라이드의 autoplay 속성 변경
+     $("swiper-wrapper .first").attr("data-autoplay", 5200);
 
     // 나머지 슬라이드 처리
     // REVIEW_ARR 배열을 순회하면서 데이터를 처리
-    $.each(REVIEW_ARR, function (index, item) {
+    $.each(REVIEW_ARR.slice(1), function (index, item) {
       // imgSrc 속성이 있는지 확인
       if (item.imgSrc) {
         // imgSrc 속성이 있을 경우에만 append
