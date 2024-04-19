@@ -1,5 +1,265 @@
 @charset "utf-8";
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 1430px) {
+  .shortcut .inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 45px 20px;
+  }
+  .recommend .inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 45px 20px;
+  }
+}
+@media screen and (max-width: 1389px) {
+  .recommend > .inner > ul > li {
+    width: calc(100% / 4 - 1%);
+    height: 100%;
+    min-height: 450px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px 0px #c3c3c3;
+  }
+  .gangbox {
+    padding: 7%;
+    cursor: pointer;
+    /* background-color: aquamarine; */
+    max-width: 346px;
+    max-height: 240px;
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+  .offline {
+    font-family: "Pretendard";
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+    background-color: #aad9bb;
+    border-radius: 20px;
+    padding: 2% 3%;
+  }
+  .online {
+    font-family: "Pretendard";
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+    background-color: #d5f0c1;
+    border-radius: 20px;
+    padding: 2% 3%;
+  }
+  .ksas {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #242424;
+    padding: 8% 0% 4% 0%;
+  }
+  .ksas2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 140%;
+  }
+}
+@media screen and (max-width: 1383px) {
+  .shortcutbtn > li > .padding > .shortbtnti {
+    z-index: 99;
+    font-family: "GangwonEduPowerExtraBoldA";
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0 10%;
+    padding-bottom: 10%;
+    text-align: center;
+    /* 추가적인 스타일링이 필요할 경우 여기에 추가 */
+  }
+}
+@media screen and (max-width: 1250px) {
+  .recommend > .inner > ul > li {
+    width: calc(100% / 4 - 1%);
+    height: 100%;
+    min-height: 440px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px 0px #c3c3c3;
+  }
+  .gangbox {
+    padding: 7%;
+    cursor: pointer;
+    /* background-color: aquamarine; */
+    max-width: 346px;
+    max-height: 240px;
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+}
+@media screen and (max-width: 1228px) {
+  .recommend > .inner > ul > li {
+    width: calc(100% / 4 - 1%);
+    height: 100%;
+    min-height: 430px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px 0px #c3c3c3;
+  }
+  .gangbox {
+    padding: 7%;
+    cursor: pointer;
+    /* background-color: aquamarine; */
+    max-width: 346px;
+    max-height: 240px;
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+}
+@media screen and (max-width: 1191px) {
+  .gangboxtit {
+    font-family: "Pretendard";
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #959595;
+    padding-left: 2%;
+  }
+}
+@media screen and (max-width: 1191px) {
+  .shortcutbtn > li > .padding > .shortbtnti {
+    z-index: 99;
+    font-family: "GangwonEduPowerExtraBoldA";
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0 5%;
+    padding-bottom: 10%;
+    text-align: center;
+    /* 추가적인 스타일링이 필요할 경우 여기에 추가 */
+  }
+}
+@media screen and (max-width: 1089px) {
+  .section-title {
+    padding-bottom: 1.3%;
+    font-size: 2.2rem;
+  }
+  .find {
+    font-family: "Pretendard-Regular";
+    font-size: 1.9rem;
+    color: #333;
+    padding-bottom: 1%;
+  }
+  .recommend > .inner > ul > li {
+    width: calc(100% / 4 - 1%);
+    height: 100%;
+    min-height: 370px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px 0px #c3c3c3;
+  }
+  .gangbox {
+    padding: 7%;
+    cursor: pointer;
+    /* background-color: aquamarine; */
+    max-width: 346px;
+    max-height: 240px;
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+  .ksas {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #242424;
+    padding: 8% 0% 4% 0%;
+  }
+  .ksas2 {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 140%;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .offline {
+    font-family: "Pretendard";
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #333;
+    background-color: #aad9bb;
+    border-radius: 20px;
+    padding: 2% 3%;
+  }
+  .online {
+    font-family: "Pretendard";
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #333;
+    background-color: #d5f0c1;
+    border-radius: 20px;
+    padding: 2% 3%;
+  }
+  .gangboxtit {
+    font-family: "Pretendard";
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: #959595;
+    padding-left: 2%;
+  }
+}
+@media screen and (max-width: 978px) {
+  .shortcutbtn > li > .padding > .shortbtnti {
+    z-index: 99;
+    font-family: "GangwonEduPowerExtraBoldA";
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 5%;
+    padding-bottom: 10%;
+    text-align: center;
+    /* 추가적인 스타일링이 필요할 경우 여기에 추가 */
+  }
+}
+@media screen and (max-width: 916px) {
+  .recommend > .inner > ul > li {
+    width: calc(100% / 4 - 1%);
+    height: 100%;
+    min-height: 340px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px 0px #c3c3c3;
+  }
+}
+@media screen and (max-width: 892px) {
+  .shortcutbtn > li > .padding > .shortbtnti {
+    z-index: 99;
+    font-family: "GangwonEduPowerExtraBoldA";
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0 5%;
+    padding-bottom: 10%;
+    text-align: center;
+    /* 추가적인 스타일링이 필요할 경우 여기에 추가 */
+  }
+}
+@media screen and (max-width: 874px) {
+  .gangbox {
+    padding: 4%;
+    cursor: pointer;
+    /* background-color: aquamarine; */
+    max-width: 346px;
+    max-height: 217px;
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+}
+@media screen and (max-width: 861px) {
+  .section-title {
+    padding-bottom: 1.3%;
+    font-size: 2rem;
+  }
+  .find {
+    font-family: "Pretendard-Regular";
+    font-size: 1.6rem;
+    color: #333;
+    padding-bottom: 1%;
+  }
+}
+@media screen and (max-width: 808px) {
+  .shortcutbtn > li > .padding > .shortbtnti {
+    z-index: 99;
+    font-family: "GangwonEduPowerExtraBoldA";
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0 5%;
+    padding-bottom: 10%;
+    text-align: center;
+    /* 추가적인 스타일링이 필요할 경우 여기에 추가 */
+  }
 }
 @media screen and (max-width: 768px) {
   .shortcut .inner {
@@ -32,6 +292,16 @@
     width: calc(100% / 3 - 1%);
     height: 100%;
   }
+  .shortcutbtn > li > .padding > .shortbtnti {
+    z-index: 99;
+    font-family: "GangwonEduPowerExtraBoldA";
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 0 10%;
+    padding-bottom: 10%;
+    text-align: center;
+    /* 추가적인 스타일링이 필요할 경우 여기에 추가 */
+  }
   /* recommend */
   .recommend .inner {
     width: 100%;
@@ -39,8 +309,8 @@
   }
   .recommend > .inner > ul > li {
     width: calc(100% / 2 - 1%);
-    height: 100%;
-    min-height: 300px;
+    /* height: 100%; */
+    min-height: 470px;
     border-radius: 30px;
     box-shadow: 3px 3px 10px 0px #c3c3c3;
   }
@@ -60,15 +330,76 @@
     overflow-x: auto;
   }
   .morebtn {
-    gap: 2%;
+    width: 200px;
+    text-align: right; /* 오른쪽 정렬 */
+    margin-bottom: 1.3%;
+    cursor: pointer; /* 마우스 오버 시 커서 변경 */
+    float: right;
   }
+
+  .morebtn > img,
+  .recommendmore {
+    display: inline-block; /* img와 recommendmore를 inline-block으로 설정 */
+    vertical-align: middle; /* 수직 중앙 정렬 */
+    transition: transform 0.3s ease, font-weight 0.3s ease; /* 부드러운 변환 효과 */
+  }
+
   .morebtn > img {
-    width: 10%;
+    width: 32%;
+    transition: transform 0.3s ease; /* img 변환에 대한 부드러운 효과 */
+  }
+
+  .recommendmore {
+    font-family: "Pretendard-Regular";
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #333;
+    margin-left: 3%; /* img와 recommendmore 사이 간격 */
+    transition: font-weight 0.3s ease; /* 폰트 굵기 변환에 대한 부드러운 효과 */
+  }
+  .offline {
+    font-family: "Pretendard";
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+    background-color: #aad9bb;
+    border-radius: 20px;
+    padding: 2% 3%;
+  }
+  .online {
+    font-family: "Pretendard";
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+    background-color: #d5f0c1;
+    border-radius: 20px;
+    padding: 2% 3%;
+  }
+  .ksas {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #242424;
+    padding: 8% 0% 4% 0%;
+    white-space: nowrap;
+  }
+  .ksas2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 140%;
   }
   .card {
     font-size: 1.2rem;
     margin-top: 3%;
     color: #c2c2c2;
+  }
+}
+@media screen and (max-width: 716px) {
+  .recommend > .inner > ul > li {
+    width: calc(100% / 2 - 1%);
+    /* height: 100%; */
+    min-height: 460px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px 0px #c3c3c3;
   }
 }
 @media screen and (max-width: 696px) {
@@ -81,6 +412,15 @@
     padding-bottom: 10%;
     text-align: center;
     /* 추가적인 스타일링이 필요할 경우 여기에 추가 */
+  }
+}
+@media screen and (max-width: 678px) {
+  .recommend > .inner > ul > li {
+    width: calc(100% / 2 - 1%);
+    /* height: 100%; */
+    min-height: 450px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px 0px #c3c3c3;
   }
 }
 @media screen and (max-width: 652px) {
@@ -126,6 +466,20 @@
     text-align: center;
     /* 추가적인 스타일링이 필요할 경우 여기에 추가 */
   }
+  .recommend > .inner > ul > li {
+    width: calc(100% / 2 - 1%);
+    /* height: 100%; */
+    min-height: 430px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px 0px #c3c3c3;
+  }
+  .gangboxtit {
+    font-family: "Pretendard";
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #959595;
+    padding-left: 2%;
+  }
 }
 @media screen and (max-width: 547px) {
   .section-title {
@@ -149,8 +503,19 @@
     /* 추가적인 스타일링이 필요할 경우 여기에 추가 */
   }
 }
+@media screen and (max-width: 536px) {
+  .recommend > .inner > ul > li {
+    width: calc(100% / 2 - 1%);
+    /* height: 100%; */
+    min-height: 410px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px 0px #c3c3c3;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .shortcut .inner {
+    position: relative;
     width: 100%;
     padding: 10% 4%;
   }
@@ -218,10 +583,10 @@
     display: none;
   }
   .gangbox {
-    padding: 7%;
+    padding: 6%;
     cursor: pointer;
     /* background-color: aquamarine; */
-    min-width: 291px;
+    max-width: 455px;
     max-height: 206px;
     overflow-y: auto;
     overflow-x: auto;
@@ -229,7 +594,7 @@
   .offline {
     font-family: "Pretendard";
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     color: #333;
     background-color: #aad9bb;
     border-radius: 20px;
@@ -238,7 +603,7 @@
   .online {
     font-family: "Pretendard";
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #333;
     background-color: #d5f0c1;
     border-radius: 20px;
@@ -247,44 +612,70 @@
   .gangboxtit {
     font-family: "Pretendard";
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: #959595;
     padding-left: 2%;
   }
   .ksas {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     font-weight: bold;
     color: #242424;
-    padding: 8% 0% 4% 0%;
+    padding: 6% 0% 4% 0%;
   }
   .ksas2 {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     font-weight: 500;
     line-height: 140%;
   }
   .morebtn {
-    gap: 2%;
-    /* background-color: aqua; */
     position: absolute;
-    bottom: 0;
-    justify-content: center;
+    bottom: -1%;
+    left: 25%;
+    width: 200px;
+    text-align: right; /* 오른쪽 정렬 */
+    margin-bottom: 1.3%;
+    cursor: pointer; /* 마우스 오버 시 커서 변경 */
+    float: right;
   }
+
+  .morebtn > img,
+  .recommendmore {
+    display: inline-block; /* img와 recommendmore를 inline-block으로 설정 */
+    vertical-align: middle; /* 수직 중앙 정렬 */
+    transition: transform 0.3s ease, font-weight 0.3s ease; /* 부드러운 변환 효과 */
+  }
+
   .morebtn > img {
-    width: 17%;
+    width: 32%;
+    transition: transform 0.3s ease; /* img 변환에 대한 부드러운 효과 */
   }
+
   .recommendmore {
     font-family: "Pretendard-Regular";
     font-size: 1.6rem;
-    font-weight: bold;
+    font-weight: 500;
     color: #333;
+    margin-left: 3%; /* img와 recommendmore 사이 간격 */
+    transition: font-weight 0.3s ease; /* 폰트 굵기 변환에 대한 부드러운 효과 */
   }
+
   .card {
     font-size: 1rem;
     margin-top: 3%;
     color: #c2c2c2;
   }
 }
-
+@media screen and (max-width: 462px) {
+  .gangbox {
+    padding: 5%;
+    cursor: pointer;
+    /* background-color: aquamarine; */
+    max-width: 420px;
+    max-height: 206px;
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+}
 @media screen and (max-width: 426px) {
   .shortcutbtn > li > .padding > .shortbtnti {
     z-index: 99;
@@ -295,6 +686,44 @@
     padding-bottom: 10%;
     text-align: center;
     /* 추가적인 스타일링이 필요할 경우 여기에 추가 */
+  }
+}
+@media screen and (max-width: 390px) {
+  .offline {
+    font-family: "Pretendard";
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+    background-color: #aad9bb;
+    border-radius: 20px;
+    padding: 2% 3%;
+  }
+  .online {
+    font-family: "Pretendard";
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+    background-color: #d5f0c1;
+    border-radius: 20px;
+    padding: 2% 3%;
+  }
+  .gangboxtit {
+    font-family: "Pretendard";
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #959595;
+    padding-left: 2%;
+  }
+  .ksas {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #242424;
+    padding: 6% 0% 4% 0%;
+  }
+  .ksas2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 140%;
   }
 }
 @media screen and (max-width: 364px) {
