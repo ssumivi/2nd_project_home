@@ -14,7 +14,6 @@
 .sw-review {
   height: 100%;
   padding: 10% 0 0;
-  transition: all 3s;
 }
 .sw-review .fa-solid {
   position: absolute;
@@ -150,7 +149,6 @@
   z-index: 99;
   cursor: pointer;
 }
-
 /* notice area */
 .notice {
   position: relative;
