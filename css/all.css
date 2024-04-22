@@ -21,3 +21,14 @@ body {
   font-size: 2.75rem;
   font-weight: 700;
 }
+@media screen and (max-width: 1400px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}

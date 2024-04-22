@@ -23,7 +23,11 @@ window.addEventListener("load", function () {
   let noticeTag = this.document.getElementById("data-notice");
   function showNotice() {
     let html = "";
-    NOTICE_ARR.slice(0, 4).forEach(function (item, index) {
+    let maxVisibleItems = 4;
+    if (window.innerWidth < 380) {
+      maxVisibleItems = 3;
+    }
+    NOTICE_ARR.slice(0, maxVisibleItems).forEach(function (item, index) {
       let newLabel = ""; // 초기값은 빈 문자열로 설정
       if (index === 0 || index === 1) {
         newLabel = '<span class="notice-new">신규</span>';
@@ -66,7 +70,7 @@ $(document).ready(function () {
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         },
-        speed: 5000,
+        speed: 5800,
         // centeredSlides: true,
         allowMouseEvents: true, // 사용자가 마우스로 스와이프 가능
         noSwiping: true, // 사용자 스와이프에 대해 속도 속성을 무시
