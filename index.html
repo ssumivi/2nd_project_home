@@ -36,6 +36,13 @@
     <meta property="og:description" content="노인 분들을 위한 쉽고 편리한 디지털 교육 플랫폼. 스마트폰 사용법부터 온라인 금융 관리까지, 생활에 필요한 다양한 교육 콘텐츠를 제공합니다." />
     <meta property="og:image" content="플랫폼 로고나 대표 이미지 URL" />
     <meta property="og:url" content="플랫폼의 웹사이트 주소" />
+    <!-- 미리보기 이미지 -->
+    <meta property="og:url" content="https://smartgiljabi-a.vercel.app/">
+    <meta property="og:title" content="스마트길잡이">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../images/meta.png">
+    <meta property="og:description" content="모든 연령층이 디지털 시대를 더불어 살아가고, 
+    함께 성장할 수 있는 환경을 조성합니다.">
     <!-- swiper css cdn -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- fontawesome css cdn -->
@@ -80,16 +87,16 @@
     <div class="wrap">
       <!-- 채은영역 -->
       <div class="header-wrap .scrolled">
-        <div class="header">
-          <div class="logo">
+        <div class="header">  <!-- 모바일메뉴 -->
+          <a href="#" class="logo">
             <img src="images/main_logo.png" alt="로고" />
-          </div>
+          </a>
           <div class="header-menuline">
             <div class="header-menu">
               <ul>
                 <li><a href="">소개</a></li>
                 <li class="hd-menu1"><a href="">수강신청</a></li>
-                <li><a href="">자원봉사신청</a></li>
+                <li id ="volunteer-apply"><a href="">자원봉사신청</a></li>
                 <li><a href="">교육자료실</a></li>
                 <li><a href="">역량수준진단</a></li>
                 <li><a href="">고객센터</a></li>
@@ -97,6 +104,7 @@
               </ul>
               <ul>
                 <li class="hd-menu2"><a href="">교육과정찾기</a></li>
+                <li class="hd-menu3"><a href="">자원봉사등록</a></li>
               </ul>
             </div>
             <div class="header-signup">
@@ -110,19 +118,44 @@
               <div id="signup-section">
                 <button id="signup-button">회원가입</button>
               </div>
+              
+            </div>
+            <!-- 모바일메뉴 -->
+            <button class="mbt">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <div class="nav-mb">
+              <ul class="nav-mb-gnb">
+               <div class="nav-flex">
+               <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li></div>
+                <li><a href="#">소개</a></li>
+                <li><a href="#">수강신청</a></li>
+                <li><a href="#">자원봉사신청</a></li>
+                <li><a href="#">교육자료실</a></li>
+                <li><a href="#">역량수준진단</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">내정보</a></li>
+              </ul>
             </div>
           </div>
         </div>
+      
+
       </div>
       <div class="visual-wrap inner">
         <video src="images/video2.mp4" controls autoplay muted id="vs-video"></video>
         <div class="visual-button">
+          <div class="flex1">
           <a href=""><button class="sugang">수강신청</button></a>
-          <a href=""><button class="bongsa">자원봉사등록</button></a>
+          <a href=""><button class="bongsa">자원봉사등록</button></a></div>
+          <div class="flex2">
           <a href=""
             ><button class="callcenter"><img src="images/phonepng.png" alt="콜센터이미지" id="callimg" />콜센터</button></a
           >
-          <a href=""><button class="qna">Q&A</button></a>
+          <a href=""><button class="qna">Q&A</button></a></div>
         </div>
       </div>
       <!-- 서아영역 -->
@@ -286,7 +319,7 @@
           <a href="#">저작권보호정책</a>
           <a href="#">고객센터</a>
         </div>
-        <p class="copy">COPYRIGHT © 2024 그린1조2차프로젝트. ALL RIGHTS RESERVED.</p>
+        <p class="copy">COPYRIGHT © 2024 이서아 김수민 탁채은. ALL RIGHTS RESERVED.</p>
       </footer>
     </div>
     <script>

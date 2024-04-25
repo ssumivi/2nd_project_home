@@ -23,6 +23,7 @@ window.addEventListener("load", function () {
   let noticeTag = this.document.getElementById("data-notice");
   function showNotice() {
     let html = "";
+
     let maxVisibleItems = 4;
     if (window.innerWidth < 380) {
       maxVisibleItems = 3;
@@ -70,7 +71,9 @@ $(document).ready(function () {
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         },
+
         speed: 5800,
+
         // centeredSlides: true,
         allowMouseEvents: true, // 사용자가 마우스로 스와이프 가능
         noSwiping: true, // 사용자 스와이프에 대해 속도 속성을 무시
@@ -159,7 +162,8 @@ $(document).ready(function () {
           swReview.slideTo(swReview.activeIndex, duration);
           startAutoplay();
         }
-        // isPlaying = !isPlaying;
+
+        isPlaying = !isPlaying;
         setTimeout(() => {
           clickable = true;
         }, 200);

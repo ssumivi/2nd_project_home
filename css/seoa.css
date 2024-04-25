@@ -86,13 +86,17 @@ a {
   align-items: center;
   cursor: pointer;
 }
-.shortcutbtnli .shortbtnti {
+.shortcutbtnli {
   transition: transform 0.3s ease; /* 변화하는 과정을 0.3초 동안 부드럽게 */
 }
 
 /* .shortcutbtnli에 호버할 때 내부의 .shortbtnti 스타일 */
-.shortcutbtnli:hover .shortbtnti {
-  transform: scale(1.1); /* 원래 크기보다 10% 더 크게 */
+.shortcutbtnli:hover{
+  transform: translateY(-10px); /* 원래 크기보다 10% 더 크게 */
+}
+.shortcutbtnli:hover .shortbtnimg {
+  border-radius: 35px;
+  box-shadow: 4px 8px 5px #c5ddb0;
 }
 .shortcutbtn > li > .padding > .shortbtnti {
   z-index: 99;
@@ -157,6 +161,10 @@ a {
   min-height: 501px;
   border-radius: 30px;
   box-shadow: 3px 3px 10px 0px #c3c3c3;
+  transition: transform 0.3s ease;
+}
+.recommend > .inner > ul > li:hover{
+  transform: translateY(-10px);
 }
 .image-size {
   width: 100%; /* 기본 이미지 크기 */
@@ -205,13 +213,13 @@ a {
   padding-left: 2%;
 }
 .ksas {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: #242424;
   padding: 8% 0% 4% 0%;
 }
 .ksas2 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 500;
   line-height: 140%;
 }

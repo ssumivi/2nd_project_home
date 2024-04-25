@@ -630,7 +630,7 @@
   .morebtn {
     position: absolute;
     bottom: -1%;
-    left: 25%;
+    left: 20%;
     width: 200px;
     text-align: right; /* 오른쪽 정렬 */
     margin-bottom: 1.3%;
@@ -852,14 +852,14 @@
     line-height: 140%;
   }
   .morebtn {
-    gap: 2%;
     /* background-color: aqua; */
     position: absolute;
+    left: 15%;
     bottom: 0;
     justify-content: center;
   }
   .morebtn > img {
-    width: 17%;
+    width: 25%;
   }
   .recommendmore {
     font-family: "Pretendard-Regular";

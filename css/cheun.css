@@ -22,21 +22,103 @@
   
   /* 스크롤 내렸을 때 블러 효과 적용 */
   
+
+/* 모바일메뉴 */
+.mbt {
+    display: none;
+    position: absolute;
+    top: 40%;
+    right: 58px;
+    width: 40px;
+    height: 30px;
+    background-color: transparent;
+    /* font-size: 0; */
+    border: 0;
+    cursor: pointer;
+  }
+  .mbt.active span {
+    background-color: #222;
+  }
+  .mbt span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+  }
+  .mbt span:nth-child(1) {
+    top: 0;
+    transform-origin: 0 50%;
+    transition: all 0.3s;
+  }
+  .mbt.ani span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  .mbt span:nth-child(2) {
+    top: 50%;
+  }
+  .mbt.ani span:nth-child(2) {
+    opacity: 0;
+  }
+  .mbt span:nth-child(3) {
+    top: 100%;
+    transform-origin: 0 50%;
+    transition: all 0.3s;
+  }
+  .mbt.ani span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  
+  /* 모바일 gnb */
+  .nav-mb {
+    position: absolute;
+    left: 100%;
+    top: 100px;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: #fff;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  .nav-mb.active {
+    left: 0%;
+    opacity: 1;
+  }
+  .nav-mb-gnb  li {
+    line-height: 67px;
+  }
+  .nav-mb-gnb li a {
+    display: block;
+    padding: 0 40px;
+    font-size: 24px;
+    color: #222;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .nav-flex >li > a{
+    border-bottom: 0;
+  }
 .header{
     position: relative;
     width: 100%;
     display: flex;
+    align-items: center;
     padding: 1%;
 }
 .logo{
-    vertical-align: top;
+  position: relative;
+  display: block;
     width: 20%;
-    height: 100%;
+    /* height: 100%; */
+    /* background-color: #333333; */
 }
 .logo img{
-    position: absolute;
-    width: 17%;
-    top: 16%;
+
+   position: relative;
+    width: 100%;
+    /* height: 100%; */
+    /* top: 16%; */
 
 }
 .header-menuline{
@@ -44,16 +126,20 @@
     justify-content: space-around;
     width: 100%;
     padding: 1%;
-    
+    align-items: center;
+    font-weight: 600;
 }
 .header-menu{
     width: 80%;
+    position: relative;
+}
+.header-menu li{
+  
 }
 .header-menu ul{
     width: 100%;
     display: flex;
     gap: 1%;
-    padding: 1.2%;
     justify-content: space-between;
     font-size: 1.3rem;
 
@@ -77,19 +163,39 @@
     border: none;
     background: none;
    font-size: 1.3rem;
-   font-weight:600;
    font-family: "Pretendard-Regular";
    cursor: pointer;
    color: #333333;
 }
-.hd-menu2{
+.hd-menu2 {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 10%;
+  background-color: #80bcbd;
+  border-radius: 35px;
+  height: 147%;
+  width: 11%;
+  text-align: center;
+  
+  z-index: 1;
+}
+.hd-menu2:hover{
+  background-color: #aad9bb;
+ 
+}
+.hd-menu2 a{
+  position: absolute;
+color: #fff !important;
+right: 13%;
+text-align: center;
+top: 22%;
+font-size: 1.2rem;
 
-    border: solid #80bcbd;
-    border-radius: 35px;
-    background-color: #80bcbd;
-    align-items: center;
-    display: none;
-    
+}
+.hd-menu2 li {
+  display: block;
+  padding: 10px;
 }
 .hd-menu1 > a:hover .hd-menu2{
     display: block;
@@ -97,35 +203,75 @@
     width: 20%;
     display: block;
 }
+.hd-menu3 {
+  display: none;
+  position: absolute;
+  top: 130%;
+  left: 26.5%;
+  background-color: #80bcbd;
+  border-radius: 35px;
+  height: 147%;
+  width: 11%;
+  text-align: center;
+  
+  z-index: 1;
+}
+.hd-menu3 a{
+  position: absolute;
+color: #fff !important;
+right: 13%;
+text-align: center;
+top: 22%;
+font-size: 1.2rem;
 
+}
+.hd-menu3:hover{
+  background-color: #aad9bb;
+ 
+}
 #vs-video{
     width: 100%;
     border-radius: 40px;
     margin-top: 10%;
-   
+   height: 100%;
 }
+
 .visual-button{
+    display: flex;
+    width: 100%;
+}
+.flex1{
+    display: flex;
+    width: 100%;
+margin-top: 3%;
+}
+
+.flex2{
+    display: flex;
+    width: 100%;
+    margin-top: 3%;
+}
+/* .visual-button{
 display: flex;
 width: 100%;
 margin-top: 3%;
 justify-content: space-around;
-
-}
+} */
 .visual-button  button {
     background-color: #80bcbd;
     border: 1px #80bcbd;
     border-radius: 35px;
-    width: 100%;
+    width: 96%;
     height: 125px;
     font-size: 1.7rem;
     font-family: 'GangwonEduPowerExtraBoldA';   
     color: #fff;
     padding-top: 5%;
     cursor: pointer;
+
 }
 .visual-button a{
-    width: 23%;
-    
+    width: 100%;
 }
 
 .callcenter{
@@ -147,3 +293,454 @@ justify-content: space-around;
     color: #ffffff; 
   }
  
+
+
+
+
+  @media screen and (max-width: 1631px) {
+    .hd-menu2 {
+      /* display: none; */
+      position: absolute;
+      top: 130%;
+      left: 10%;
+      background-color: #80bcbd;
+      border-radius: 35px;
+      height: 147%;
+      width: 11%;
+      text-align: center;
+      
+      z-index: 1;
+    }
+    .hd-menu3 {
+  
+      top: 130%;
+      left: 26.5%;
+      height: 147%;
+      width: 11.1%;
+    }
+    .hd-menu3 a{
+    right: 13%;
+    top: 22%;
+    font-size: 1.1rem;
+    }
+    .hd-menu2 a{
+  
+    right: 13%;
+    text-align: center;
+    top: 22%;
+    font-size: 1.1rem;
+    
+    }
+  
+  
+  }
+  @media screen and (max-width: 1494px){
+    .hd-menu2 {
+      /* display: none; */
+      position: absolute;
+      top: 130%;
+      left: 9.5%;
+      background-color: #80bcbd;
+      border-radius: 35px;
+      height: 147%;
+      width: 11%;
+      text-align: center;
+      
+      z-index: 1;
+    }
+    .hd-menu3 {
+  
+      top: 130%;
+      left: 26%;
+      height: 147%;
+      width: 11.1%;
+    }
+    .hd-menu3 a{
+    right: 13%;
+    top: 22%;
+    font-size: 1rem;
+    }
+    .hd-menu2 a{
+  
+    right: 13%;
+    text-align: center;
+    top: 22%;
+    font-size: 1rem;
+    
+    }
+  } 
+  @media screen and (max-width: 1189px){
+    .hd-menu2 {
+      width: 12%;
+      left: 24%;
+    }
+    .hd-menu3 {
+      width: 12%;
+     
+      left: 7.5%;
+    }
+   
+    
+  }
+  @media screen and (max-width: 1190px){
+    .hd-menu2 {
+      width: 12%;
+      left: 9%;
+    }
+    .hd-menu3 {
+      width: 12%;
+      left: 25.2%;
+    }
+  
+  
+  }
+  @media screen and (max-width: 944px){
+    .header-menu ul{
+        font-size: 1.1rem;
+    }
+    
+  
+    .visual-button button {
+        font-size: 1.5rem;
+        font-family: 'GangwonEduPowerExtraBoldA';
+        color: #fff;
+    }
+ 
+}
+
+@media screen and (max-width: 1077px){
+  #phone1, #phone2{
+    position: absolute;
+    right: -7%;
+    top: 55%;
+   
+  }
+  .hd-menu2 {
+    width: 14%;
+    left: 9%;
+  }
+  .hd-menu3 {
+    width: 14%;
+    left: 25.2%;
+  }
+}
+
+@media screen and (max-width: 881px){
+  .visual-button > a > button {
+    font-size: 1.2rem;}
+
+    #phone1, #phone2{
+      position: absolute;
+      right: -11%;
+      top: 38%;
+     
+    }
+    .hd-menu2 {
+      width: 16%;
+      left: 6%;
+    }
+    .hd-menu3 {
+      width: 16%;
+      left: 23%;
+    }
+  
+}
+
+  @media screen and (max-width: 876px){
+    .header-signup button {
+        font-size: 1.2rem;
+    }
+  }
+  @media screen and (max-width: 822px){
+    .header-menu ul{
+        font-size: 1rem;
+    }
+    .header-menuline{
+        padding: 4.3%;
+    }
+  
+    .header-signup button {
+        font-size: 1rem;
+    }
+    #callimg {
+        width: 15%;
+        height: 30%;
+        position: absolute;
+        right: 70%;
+        top: 37%;
+        transform: rotate(17deg);
+    }
+  }
+  @media screen and (max-width: 794px){
+
+    .hd-menu2 {
+      width: 17%;
+      left: 6%;
+    }
+    .hd-menu3 {
+      width: 17%;
+      left: 23%;
+    }
+  
+  
+  }
+  @media screen and (max-width: 768px){
+    #vs-video {
+      width: 100%;
+      border-radius: 40px;
+      margin-top: 18%;
+  }
+    .header-wrap {
+      width: auto; /* 화면이 768px 이하일 때 너비를 자동으로 조정합니다. */
+    }
+    .logo {
+      position: relative;
+      display: block;
+      width: 40%;
+      /* height: 100%; */
+      /* background-color: #333333; */
+  }
+    .visual-button{
+    flex-direction: column;
+}
+.visual-button  button {
+
+  font-size: 1.7rem;
+  font-family: 'GangwonEduPowerExtraBoldA';   
+
+
+}
+.nav-flex{
+  display: flex;
+  justify-content: space-around;
+border-bottom: 1px solid #e5e5e5;
+
+}
+#callimg {
+    width: 12%;
+    height: 30%;
+    position: absolute;
+    right: 65%;
+    top: 37%;
+    transform: rotate(17deg);
+}
+
+.header-menu{
+    display: none;
+}
+.header-signup{
+    display: none;
+}
+.mbt{
+    display: block;
+   
+}
+
+
+.mbt.ani {
+    display: block;
+}
+
+.flex3{
+  display: flex;
+}
+.nav-mb-gnb{
+  display: block;
+}
+
+
+
+  }
+
+  @media screen and (max-width: 712px){
+    
+      .header-menuline{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 1%;
+        
+    }
+  }
+
+  @media screen and (max-width: 547px){
+    #vs-video{
+      width: 100%;
+      border-radius: 40px;
+      margin-top: 20%;
+     
+  }
+ 
+  }
+  @media screen and (max-width: 460px){
+
+
+    .logo{
+      position: relative;
+      display: block;
+        width: 100%;
+        /* height: 100%; */
+        /* background-color: #333333; */
+    }
+    .logo img{
+    
+       position: relative;
+        width: 100%;
+        /* height: 100%; */
+        /* top: 16%; */
+    
+    }
+
+  }
+  @media screen and (max-width: 370px){
+
+    .visual-button  button {
+      background-color: #80bcbd;
+      border: 1px #80bcbd;
+      border-radius: 20px;
+      width: 96%;
+      height: 125px;
+      font-size: 1.7rem;
+      color: #fff;
+ 
+  
+  }
+    .visual-button a {
+      width: 100%;
+  }
+  #callimg {
+    width: 15%;
+    height: 29%;
+    position: absolute;
+    right: 73%;
+    top: 37%;
+    transform: rotate(17deg);
+}
+#vs-video{
+  width: 100%;
+  border-radius: 22px;
+  margin-top: 30%;
+}
+
+.logo{
+  position: relative;
+  display: block;
+    width: 100%;
+    /* height: 100%; */
+    /* background-color: #333333; */
+}
+.logo img{
+
+   position: relative;
+    width: 100%;
+    /* height: 100%; */
+    /* top: 16%; */
+
+}
+.mbt {
+
+  position: absolute;
+  top: 40%;
+  right: 20px;
+  width: 30px;
+  height: 20px;
+  background-color: transparent;
+  /* font-size: 0; */
+  border: 0;
+  cursor: pointer;
+}
+.visual-button a button{
+  height: 200%;
+
+}
+.flex2{
+  margin-top: 40px;
+}
+.nav-mb-gnb > li{
+  line-height: 60px;
+}
+.nav-mb-gnb >li >a{
+  font-size: 1.3rem;
+}
+.nav-flex >li >a{
+  font-size: 1.3rem;
+}
+
+
+
+
+  }
+  @media screen and (max-width: 320px){
+    .visual-button  button {
+      background-color: #80bcbd;
+      border: 1px #80bcbd;
+      border-radius: 20px;
+      width: 96%;
+      height: 125px;
+      font-size: 1.7rem;
+      color: #fff;
+ 
+  
+  }
+    .visual-button a {
+      width: 100%;
+  }
+  #callimg {
+    width: 15%;
+    height: 29%;
+    position: absolute;
+    right: 73%;
+    top: 37%;
+    transform: rotate(17deg);
+}
+#vs-video{
+  width: 100%;
+  border-radius: 22px;
+  margin-top: 30%;
+}
+
+.logo{
+  position: relative;
+  display: block;
+    width: 100%;
+    /* height: 100%; */
+    /* background-color: #333333; */
+}
+.logo img{
+
+   position: relative;
+    width: 100%;
+    /* height: 100%; */
+    /* top: 16%; */
+
+}
+.mbt {
+
+  position: absolute;
+  top: 40%;
+  right: 20px;
+  width: 30px;
+  height: 20px;
+  background-color: transparent;
+  /* font-size: 0; */
+  border: 0;
+  cursor: pointer;
+}
+.visual-button a button{
+  height: 200%;
+
+}
+.flex2{
+  margin-top: 40px;
+}
+.nav-mb-gnb > li{
+  line-height: 60px;
+}
+.nav-mb-gnb >li >a{
+  font-size: 1.3rem;
+}
+.nav-flex >li >a{
+  font-size: 1.3rem;
+}
+
+}
