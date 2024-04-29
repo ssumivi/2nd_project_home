@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스마트길잡이</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="favicon/KqGP9zKJ.ico" />
+    <!-- meta tag -->
+    <meta name="title" content="노인을 위한 스마트 교육 플랫폼" />
+    <meta name="description" content="노인 분들을 위한 쉽고 편리한 디지털 교육 플랫폼. 스마트폰 사용법부터 온라인 금융 관리까지, 생활에 필요한 다양한 교육 콘텐츠를 제공합니다." />
+    <meta name="keywords" content="노인 교육, 스마트 교육, 디지털 리터러시, 온라인 학습, 노인 대상 스마트폰 교육, 노인을 위한 IT 교육, 노인 생활 지원, 노인 온라인 금융 관리" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="노인 스마트 교육 플랫폼" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="노인을 위한 스마트 교육 플랫폼" />
+    <meta property="og:description" content="노인 분들을 위한 쉽고 편리한 디지털 교육 플랫폼. 스마트폰 사용법부터 온라인 금융 관리까지, 생활에 필요한 다양한 교육 콘텐츠를 제공합니다." />
+    <meta property="og:image" content="플랫폼 로고나 대표 이미지 URL" />
+    <meta property="og:url" content="플랫폼의 웹사이트 주소" />
+    <!-- swiper css cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- fontawesome css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- 기본css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <!-- 개인 css -->
+    <link rel="stylesheet" href="css/cheun.css" />
+    <link rel="stylesheet" href="css/sumin.css" />
+    <link rel="stylesheet" href="css/seoa.css" />
+    <link rel="stylesheet" href="css/seoa_responsive.css" />
+    <link rel="stylesheet" href="css/gesipan.css" />
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- swiper js cdn -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- 기본 js cdn -->
+    <script src="js/html5shiv.js"></script>
+    <!-- <script src="js/prefixfree.min.js"></script> -->
+    <script src="js/respond.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+    <!-- 개인 js -->
+    <script src="js/cheun.js"></script>
+    <script src="js/sumin.js"></script>
+    <script src="js/seoa.js"></script>
+    <script src="js/gesipan.js"></script>
+    <style>
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      #catList {
+        /* margin-top: px; */
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 3%;
+      }
+
+      .cat-card {
+        margin: 0 auto;
+        border: 1px solid #c3c3c3;
+        box-shadow: 2px 4px 10px #c3c3c3;
+        border-radius: 35px;
+        margin-bottom: 10px;
+        width: calc(100% / 4 - 3%);
+        background-color: #fff;
+        margin-top: 45px;
+        height: 371px;
+        /* background-color: #2980b9; */
+        transition: transform 0.3s ease-in-out;
+      }
+      .cat-card:hover {
+        transform: translateY(-10px);
+      }
+      .cat-card > a {
+        display: block;
+        position: relative;
+      }
+
+      .cat-image {
+        width: 100%;
+        height: 65%;
+        display: block;
+        /* margin: 0 auto; */
+      }
+
+      .cat-image1 {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        opacity: 0;
+        border-radius: 35px 35px 0 0;
+      }
+      .pagination {
+        display: flex;
+        justify-content: center;
+        margin: 5% 0;
+      }
+      .cat-info {
+        height: 20%;
+        background-color: #aad9bb;
+      }
+      .page-link {
+        margin: 0 5px;
+        padding: 10px 15px;
+        background-color: #80bcbd;
+        /* 배경색 */
+        color: #fff;
+        /* 글꼴색 */
+        border: none;
+        border-radius: 20px;
+        /* 둥근 모서리 */
+        font-weight: bold;
+        transition: background-color 0.3s;
+        /* 호버 효과 */
+      }
+
+      .page-link:hover {
+        background-color: #aad9bb;
+        /* 호버 시 배경색 변경 */
+      }
+
+      .active-page {
+        background-color: #649596;
+        /* 활성 페이지 배경색 변경 */
+      }
+
+      .disabled {
+        background-color: #ccc;
+        /* 비활성화된 버튼 배경색 */
+        pointer-events: none;
+        /* 비활성화된 버튼을 클릭하지 못하게 설정 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- 헤더 -->
+      <div class="header-wrap .scrolled">
+        <div class="header">
+          <!-- 모바일메뉴 -->
+          <a href="index.html" class="logo">
+            <img src="images/main_logo.png" alt="로고" />
+          </a>
+          <div class="header-menuline">
+            <div class="header-menu">
+              <ul>
+                <li><a href="">소개</a></li>
+                <li class="hd-menu1"><a href="">수강신청</a></li>
+                <li><a href="">자원봉사신청</a></li>
+                <li><a href="gesipan.html">교육자료실</a></li>
+                <li><a href="">역량수준진단</a></li>
+                <li><a href="">고객센터</a></li>
+                <li><a href="">내정보</a></li>
+              </ul>
+              <ul>
+                <li class="hd-menu2"><a href="">교육과정찾기</a></li>
+              </ul>
+            </div>
+            <div class="header-signup">
+              <div id="login-section">
+                <button id="login-button">로그인</button>
+              </div>
+              <div id="dashboard-section" style="display: none">
+                <div id="username-display"></div>
+                <button id="logout-button">로그아웃</button>
+              </div>
+              <div id="signup-section">
+                <button id="signup-button">회원가입</button>
+              </div>
+            </div>
+            <!-- 모바일메뉴 -->
+            <button class="mbt">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <div class="nav-mb">
+              <ul class="nav-mb-gnb">
+                <div class="nav-flex">
+                  <li><a href="#">로그인</a></li>
+                  <li><a href="#">회원가입</a></li>
+                </div>
+                <li><a href="#">소개</a></li>
+                <li><a href="#">수강신청</a></li>
+                <li><a href="#">자원봉사신청</a></li>
+                <li><a href="#">교육자료실</a></li>
+                <li><a href="#">역량수준진단</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">내정보</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 비주얼 -->
+      <div class="gesipan-wrap">
+        <div class="text">
+          <p class="gesipantitle">교육자료실</p>
+          <p class="gesipantitle2">스마트 세상으로의 한걸음, 스마트 길잡이가 함께합니다.</p>
+        </div>
+        <div class="inner">
+          <div class="gesipan-content">
+            <div class="witch"><i class="fa-solid fa-house"></i> <span class="witch1">> 교육자료실</span></div>
+            <div class="onlineghajung">
+              <p class="ghajung">온라인과정</p>
+              <ul class="allmenu">
+                <li>
+                  <span>전체보기</span>
+                </li>
+                <li>
+                  <span>컴퓨터(기초)</span>
+                </li>
+                <li>
+                  <span>스마트폰(기초)</span>
+                </li>
+                <li>
+                  <span>디지털 교육</span>
+                </li>
+                <li>
+                  <span>동영상 편집</span>
+                </li>
+                <li>
+                  <span>치매 예방교육</span>
+                </li>
+              </ul>
+              <div class="totsearch">
+                <div class="left">
+                  <span class="totalnumber">전체 <strong class="number">12</strong>건</span>
+                </div>
+                <div class="right">
+                  <select name="color" id="select">
+                    <option value="tit-con">제목 + 내용</option>
+                    <option value="tit">작성자</option>
+                    <option value="con">내용</option>
+                  </select>
+                  <label for="search"></label>
+                  <input type="search" id="search" maxlength="100" placeholder="검색어를 입력 하세요." />
+                  <span class="search1">검색</span>
+                </div>
+              </div>
+            </div>
+            <span class="line"></span>
+            <br />
+            <div id="catList">
+              <!-- js출력 고양이 리스트 -->
+            </div>
+            <div class="pagination" id="pagination">
+              <!-- js출력 pagination-->
+            </div>
+            <script>
+              const itemsPerPage = 8; //고양이 리스트를 3개 보이겠다
+              let currentPage = 1;
+              const catListDiv = document.getElementById("catList");
+              const paginationDiv = document.getElementById("pagination");
+              const prevButton = document.createElement("a"); //이전버튼
+              const nextButton = document.createElement("a"); //다음버튼
+              // URL에서 쿼리문자열을 읽어와서 고양이의 아이디를 가져온다
+              const urlParams = new URLSearchParams(window.location.search);
+              const catId = urlParams.get("id");
+
+              // 고양이 정보를 가져와서 화면에 출력하는 함수
+              function displayCatInfo(page) {
+                // console.log();
+                fetch("cat.json")
+                  .then((response) => response.json())
+                  .then(function (data) {
+                    console.log(data);
+                    // 페이지네이션 계산
+                    const startIndex = (page - 1) * itemsPerPage;
+                    // const startIndex = 0;
+                    // console.log(startIndex);
+                    const endIndex = startIndex + itemsPerPage;
+                    // const endIndex = 3;
+                    // console.log(endIndex); // 3
+                    // 첫화면에 리스틀 인덱스번호가 0 ~ 2까지 출력을 하기 위함
+                    const catsOnpage = data.slice(startIndex, endIndex);
+                    console.log(catsOnpage);
+                    catListDiv.innerHTML = "";
+                    catsOnpage.forEach((cat) => {
+                      // console.log(cat);
+                      const catCard = document.createElement("div");
+                      // console.log(catCard);
+                      catCard.className = "cat-card";
+                      // console.log(catCard);
+                      catCard.innerHTML = `
+              <a href="catcate.html?id=${cat.id}">
+                <a href="catcate.html?id=${cat.id}">
+                                <img class="cat-image" src="${cat.url}" alt="${cat.title} 사진">
+                                <img class="cat-image1" src="${cat.hoverurl}" alt="${cat.title} 사진">
+                                <span class="view">${cat.title}</span>
+                                <span class="hamgge">함께하는 스마트 세상</span> 
+                                <p class="ai">${cat.description}</p>
+              `;
+                      catListDiv.appendChild(catCard);
+                    });
+                    pagination(data.length);
+
+                    // 이미지 호버 이벤트를 추가합니다.
+                    $(".cat-card").hover(
+                      function () {
+                        $(this).find(".cat-image").css("opacity", "0");
+                        $(this).find(".cat-image1").css("opacity", "1");
+                      },
+                      function () {
+                        $(this).find(".cat-image").css("opacity", "1");
+                        $(this).find(".cat-image1").css("opacity", "0");
+                      }
+                    );
+                  })
+                  .catch((error) => {
+                    console.error("데이터를 가져오는 중 에러가 발생했습니다:", error);
+                  });
+              }
+
+              // 페이지네이션 생성
+              function pagination(totalItems) {
+                // console.log(totalItems);
+                paginationDiv.innerHTML = "";
+
+                const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+                for (let i = 1; i <= totalPages; i++) {
+                  const pageLink = document.createElement("a");
+                  pageLink.className = "page-link";
+                  pageLink.href = `?id=${catId}&page=${i}`;
+                  pageLink.textContent = i;
+                  if (i === currentPage) {
+                    pageLink.classList.add("active-page"); // 활성 페이지 강조
+                  }
+                  paginationDiv.appendChild(pageLink);
+                }
+                // 이전버튼
+                prevButton.className = "page-link";
+                prevButton.textContent = "이전";
+                if (currentPage > 1) {
+                  prevButton.href = `?id=${catId}&page=${currentPage - 1}`;
+                } else {
+                  prevButton.classList.add("disabled"); //현재 페이지가 1일 경우 비활성화
+                }
+                paginationDiv.insertBefore(prevButton, paginationDiv.firstChild);
+                // 다음버튼
+                nextButton.className = "page-link";
+                nextButton.textContent = "다음";
+                if (currentPage < totalPages) {
+                  nextButton.href = `?id=${catId}&page=${currentPage + 1}`;
+                } else {
+                  nextButton.classList.add("disabled"); // 마지막 페이지일 경우 비활성화
+                }
+
+                paginationDiv.appendChild(nextButton);
+              }
+              // 페이지 로드시 고양이 정보 출력
+              document.addEventListener("DOMContentLoaded", function () {
+                const pageParm = urlParams.get("page");
+                if (pageParm) {
+                  currentPage = parseInt(pageParm);
+                }
+                displayCatInfo(currentPage);
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+      <!-- 푸터 -->
+      <footer class="footer">
+        <a href="#" class="youtube-logo">
+          <img src="images/youtube_logo.png" alt="유튜브 로고" />
+        </a>
+        <div class="footer-wrap">
+          <a href="index.html" class="ft-logo">
+            <img src="images/main_logo_w.png" alt="하단홈페이지로고" />
+          </a>
+          <a href="#">이용약관 및 위치정보서비스</a>
+          <a href="#"><b>개인정보처리방침</b></a>
+          <a href="#">저작권보호정책</a>
+          <a href="#">고객센터</a>
+        </div>
+        <p class="copy">COPYRIGHT © 2024 그린1조2차프로젝트. ALL RIGHTS RESERVED.</p>
+      </footer>
+    </div>
+  </body>
+</html>

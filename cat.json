@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "title": "온라인",
+    "url": "../images/gesipan/ai.png",
+    "hoverurl": "../images/gesipan/ai1.png",
+    "description": "인공지능(AI) 사용법"
+  },
+  {
+    "id": 2,
+    "title": "온라인",
+    "url": "../images/gesipan/smart.png",
+    "hoverurl": "../images/gesipan/smart1.png",
+    "description": "스마트폰 활용 교육"
+  },
+  {
+    "id": 3,
+    "title": "온라인",
+    "url": "../images/gesipan/computer.png",
+    "hoverurl": "../images/gesipan/computer1.png",
+    "description": "컴퓨터(기초) 교육"
+  },
+  {
+    "id": 4,
+    "title": "온라인",
+    "url": "../images/gesipan/dijiter.png",
+    "hoverurl": "../images/gesipan/dijiter1.png",
+    "description": "디지털 교육"
+  },
+  {
+    "id": 5,
+    "title": "온라인",
+    "url": "../images/gesipan/videopj.png",
+    "hoverurl": "../images/gesipan/video1.png",
+    "description": "동영상 편집 교육"
+  },
+  {
+    "id": 6,
+    "title": "온라인",
+    "url": "../images/gesipan/chimae.png",
+    "hoverurl": "../images/gesipan/chimae1.png",
+    "description": "치매 예방교육"
+  },
+  {
+    "id": 7,
+    "title": "온라인",
+    "url": "../images/gesipan/youtube.png",
+    "hoverurl": "../images/gesipan/youtube1.png",
+    "description": "유튜브 채널 개설"
+  },
+  {
+    "id": 8,
+    "title": "온라인",
+    "url": "../images/gesipan/aijepum.png",
+    "hoverurl": "../images/gesipan/aijepum1.png",
+    "description": "스마트 홈 기기 사용법"
+  },
+  {
+    "id": 9,
+    "title": "온라인",
+    "url": "../images/gesipan/jungbo.png",
+    "hoverurl": "../images/gesipan/jungbo1.png",
+    "description": "개인정보 보호 및 사이버보안"
+  },
+  {
+    "id": 10,
+    "title": "온라인",
+    "url": "../images/gesipan/sns.png",
+    "hoverurl": "../images/gesipan/sns1.png",
+    "description": "사회적 네트워크 서비스(SNS)"
+  },
+  {
+    "id": 11,
+    "title": "온라인",
+    "url": "../images/gesipan/web.png",
+    "hoverurl": "../images/gesipan/web1.png",
+    "description": "안전한 웹 서핑 방법"
+  },
+  {
+    "id": 12,
+    "title": "온라인",
+    "url": "../images/gesipan/umsung.png",
+    "hoverurl": "../images/gesipan/umsung1.png",
+    "description": "음성 인식 기술 활용"
+  }
+]

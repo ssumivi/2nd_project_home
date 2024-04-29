@@ -1,0 +1,112 @@
+@charset "utf-8";
+#submit-wrap {
+  position: relative;
+  display: block;
+}
+.enrol-box {
+  width: 100%;
+  height: calc(100% / 2 - 50px);
+  background-color: #f2f2f2;
+  border-radius: 35px;
+  padding: 65px;
+}
+.box-title {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.375rem;
+  text-align: center;
+}
+.enrol-info {
+  width: 95%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 35px;
+  padding: 35px;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 2;
+  margin: 45px auto;
+}
+.enrol-info-li b {
+  font-weight: 600;
+}
+.sub-link {
+  font-size: 1.4rem;
+  margin-top: 3%;
+}
+.sub-link a {
+  position: relative;
+  display: inline-block;
+  color: #959595;
+}
+.sub-link a::after {
+  content: ""; /* 가상 요소에 내용 없음을 설정하여 밑줄을 만듭니다. */
+  position: absolute; /* 절대 위치 설정 */
+  bottom: 0; /* 텍스트 아래로 밑줄의 위치 조절 */
+  left: 0; /* 왼쪽 여백 설정 */
+  width: 100%; /* 가로폭 100%로 설정하여 텍스트와 같은 길이로 밑줄 표시 */
+  height: 2px; /* 밑줄의 두께 설정 */
+  background-color: #959595; /* 밑줄의 색상 설정 */
+}
+.sub-info {
+  font-size: 1.5rem;
+  text-align: center;
+}
+/* user info box */
+.user-info-box {
+  width: 100%;
+  height: calc(100% / 2 - 50px);
+  background-color: #fff;
+  border-radius: 35px;
+  padding: 65px;
+  box-shadow: 0px 28px 100px rgba(0, 0, 0, 0.12);
+  margin-top: 9%;
+}
+.sub-title {
+  font-weight: 500;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 4;
+  text-align: center;
+  color: #959595;
+}
+.input-box {
+  position: relative;
+  text-align: center;
+}
+.input-box label {
+  font-size: 2rem;
+  font-weight: 600;
+  display: inline-block;
+  width: calc(100% / 4);
+}
+.input-box input {
+  width: 34vw;
+  height: 5vw;
+  border: 3px solid #f2f2f2;
+  border-radius: 35px;
+  font-size: 1.5rem;
+  white-space: 2px;
+  margin: 3% 0;
+  padding: 0 25px;
+}
+.input-box input:focus {
+  outline: none; /* 기본 테두리 제거 */
+  border: 2px solid #80bcbd; /* 사용자 정의 테두리 색상 적용 */
+}
+.submit-btn {
+  background: #f2f2f2;
+  border-radius: 35px;
+  border: 0;
+  font-size: 2rem;
+  width: 38vw;
+  display: block;
+  padding: 25px;
+  text-align: center;
+  margin: 12% auto;
+}
+.submit-btn.active {
+  background: #80bcbd;
+  color: #fff;
+}

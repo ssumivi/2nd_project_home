@@ -32,56 +32,19 @@ window.addEventListener("load", function() {
       htmlRoot.classList.add("active");
     }
   });
-  var menu1 = document.querySelector('.hd-menu1');
-  var menu2 = document.querySelector('.hd-menu2');
-
-  // 수강신청 메뉴에 대한 이벤트 핸들러
-  menu1.addEventListener('mouseenter', function() {
-      // 교육과정찾기 메뉴를 보여줍니다.
-      menu2.style.display = 'block';
-  });
-
-  menu1.addEventListener('mouseleave', function() {
-      // 마우스가 수강신청 메뉴에서 떠날 때 교육과정찾기 메뉴를 숨깁니다.
-      // 교육과정찾기 메뉴에 마우스가 있으면 숨기지 않습니다.
-      if (!menu2.matches(':hover')) {
-          menu2.style.display = 'none';
-      }
-  });
-
-  // 교육과정찾기 메뉴에 대한 이벤트 핸들러
-  menu2.addEventListener('mouseenter', function() {
-      // 마우스가 교육과정찾기 메뉴에 올라갔을 때 메뉴를 보여줍니다.
-      menu2.style.display = 'block';
-  });
-
-  menu2.addEventListener('mouseleave', function() {
-      // 마우스가 교육과정찾기 메뉴에서 떠날 때 메뉴를 숨깁니다.
-      menu2.style.display = 'none';
-  });
-  var volunteerApply = document.getElementById('volunteer-apply');
-var volunteerRegistration = document.querySelector('.hd-menu3');
-
-volunteerApply.addEventListener('mouseenter', function() {
-    // 자원봉사 등록 메뉴를 보여줍니다.
-    volunteerRegistration.style.display = 'block';
-});
-
-volunteerApply.addEventListener('mouseleave', function() {
-    // 마우스가 자원봉사 신청 메뉴에서 떠날 때 자원봉사 등록 메뉴를 숨깁니다.
-    // 자원봉사 등록 메뉴에 마우스가 있으면 숨기지 않습니다.
-    if (!volunteerRegistration.matches(':hover')) {
-        volunteerRegistration.style.display = 'none';
-    }
-});
-
-volunteerRegistration.addEventListener('mouseenter', function() {
-    // 마우스가 자원봉사 등록 메뉴에 올라갔을 때 메뉴를 보여줍니다.
-    volunteerRegistration.style.display = 'block';
-});
-
-volunteerRegistration.addEventListener('mouseleave', function() {
-    // 마우스가 자원봉사 등록 메뉴에서 떠날 때 메뉴를 숨깁니다.
-    volunteerRegistration.style.display = 'none';
-});
+  var menu1 = document.querySelector('.hd-menu1 > a');
+var menu2 = document.querySelector('.hd-menu2');
+menu1.addEventListener("click" ,function(e){
+  e.preventDefault()
+  menu2.classList.toggle("active")
+  
+})
+  var menu3 = document.querySelector('#volunteer-apply > a');
+var menu4 = document.querySelector('.hd-menu3');
+menu3.addEventListener("click" ,function(e){
+  e.preventDefault()
+  menu4.classList.toggle("active")
+  
+})
+  
 });

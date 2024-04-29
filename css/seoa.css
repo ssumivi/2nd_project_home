@@ -51,7 +51,7 @@ a {
 .shortcut .inner {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 45px 0;
+  padding: 65px 0;
 }
 .find {
   font-family: "Pretendard-Regular";
@@ -91,7 +91,7 @@ a {
 }
 
 /* .shortcutbtnli에 호버할 때 내부의 .shortbtnti 스타일 */
-.shortcutbtnli:hover{
+.shortcutbtnli:hover {
   transform: translateY(-10px); /* 원래 크기보다 10% 더 크게 */
 }
 .shortcutbtnli:hover .shortbtnimg {
@@ -116,7 +116,7 @@ a {
 .recommend .inner {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 45px 0;
+  padding: 65px 0;
 }
 .morebtn {
   /* text-align:left; */
@@ -124,8 +124,8 @@ a {
   margin-bottom: 1.3%;
   cursor: pointer; /* 마우스 오버 시 커서 변경 */
   align-items: center;
-  justify-content: space-around;
-  width: 200px;
+  justify-content: space-between;
+  width: 15%;
   float: right;
 }
 .morebtn > img {
@@ -138,12 +138,12 @@ a {
   font-size: 1.6rem;
   font-weight: 500;
   color: #333;
-  margin-left: 1%; /* img와 recommendmore 사이 간격 */
+  margin-left: 5%; /* img와 recommendmore 사이 간격 */
   transition: font-weight 0.3s ease; /* 폰트 굵기 변환에 대한 부드러운 효과 */
 }
 /* 마우스 오버 효과 */
 .morebtn:hover img {
-  transform: translateX(10px); /* img를 오른쪽으로 10px 이동 */
+  transform: translateX(8px); /* img를 오른쪽으로 10px 이동 */
 }
 .morebtn:hover .recommendmore {
   font-weight: bold;
@@ -163,7 +163,7 @@ a {
   box-shadow: 3px 3px 10px 0px #c3c3c3;
   transition: transform 0.3s ease;
 }
-.recommend > .inner > ul > li:hover{
+.recommend > .inner > ul > li:hover {
   transform: translateY(-10px);
 }
 .image-size {

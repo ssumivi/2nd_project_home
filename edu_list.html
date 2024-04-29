@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>교육과정찾기</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="favicon/KqGP9zKJ.ico" />
+    <!-- fontawesome css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- 기본css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/cheun.css" />
+    <link rel="stylesheet" href="css/sumin.css" />
+    <link rel="stylesheet" href="css/edu_list.css" />
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- 기본 js cdn -->
+    <script src="js/html5shiv.js"></script>
+    <!-- <script src="js/prefixfree.min.js"></script> -->
+    <script src="js/respond.min.js"></script>
+    <script src="js/edu_list.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- header area -->
+      <div class="header-wrap .scrolled">
+        <div class="header">
+          <!-- 모바일메뉴 -->
+          <a href="index.html" class="logo">
+            <img src="images/main_logo.png" alt="로고" />
+          </a>
+          <div class="header-menuline">
+            <div class="header-menu">
+              <ul>
+                <li><a href="">소개</a></li>
+                <li class="hd-menu1"><a href="">수강신청</a></li>
+                <li><a href="">자원봉사신청</a></li>
+                <li><a href="">교육자료실</a></li>
+                <li><a href="">역량수준진단</a></li>
+                <li><a href="">고객센터</a></li>
+                <li><a href="">내정보</a></li>
+              </ul>
+              <ul>
+                <li class="hd-menu2"><a href="">교육과정찾기</a></li>
+              </ul>
+            </div>
+            <div class="header-signup">
+              <div id="login-section">
+                <button id="login-button">로그인</button>
+              </div>
+              <div id="dashboard-section" style="display: none">
+                <div id="username-display"></div>
+                <button id="logout-button">로그아웃</button>
+              </div>
+              <div id="signup-section">
+                <button id="signup-button">회원가입</button>
+              </div>
+            </div>
+            <!-- 모바일메뉴 -->
+            <button class="mbt">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <div class="nav-mb">
+              <ul class="nav-mb-gnb">
+                <div class="nav-flex">
+                  <li><a href="#">로그인</a></li>
+                  <li><a href="#">회원가입</a></li>
+                </div>
+                <li><a href="#">소개</a></li>
+                <li><a href="#">수강신청</a></li>
+                <li><a href="#">자원봉사신청</a></li>
+                <li><a href="#">교육자료실</a></li>
+                <li><a href="#">역량수준진단</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">내정보</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- top banner -->
+      <section class="top-banner">
+        <div class="banner-txt">
+          <span class="banner-title">수강신청</span>
+          <p class="banner-sub">스마트 세상으로의 한걸음, 스마트 길잡이가 함께합니다.</p>
+        </div>
+      </section>
+      <div class="pg-navi">
+        <div class="inner">
+          <!-- js data -->
+        </div>
+      </div>
+      <div class="inner">
+        <h2 class="pg-title">교육과정찾기</h2>
+      </div>
+      <div id="data-wrap">
+        <section class="area-select">
+          <div class="inner">
+            <ul class="area-list" id="data-area">
+              <!-- js data -->
+            </ul>
+          </div>
+        </section>
+        <section class="center-select">
+          <div class="inner">
+            <ul class="center-list" id="data-center">
+              <!-- js data -->
+            </ul>
+          </div>
+        </section>
+        <section class="enroll-select" id="enroll-position">
+          <div class="inner">
+            <ul class="enroll-list" id="data-enroll">
+              <!-- data json -->
+            </ul>
+            <div class="er-pagination">
+              <button id="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+              <span id="current-page">0</span> / <span id="total-pages">0</span>
+              <button id="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 하단 footer 영역 -->
+      <footer class="footer">
+        <a href="#" class="youtube-logo">
+          <img src="images/youtube_logo.png" alt="유튜브 로고" />
+        </a>
+        <div class="footer-wrap">
+          <a href="index.html" class="ft-logo">
+            <img src="images/main_logo_w.png" alt="하단홈페이지로고" />
+          </a>
+          <a href="#">이용약관 및 위치정보서비스</a>
+          <a href="#"><b>개인정보처리방침</b></a>
+          <a href="#">저작권보호정책</a>
+          <a href="#">고객센터</a>
+        </div>
+        <p class="copy">COPYRIGHT © 2024 이서아 김수민 탁채은. ALL RIGHTS RESERVED.</p>
+      </footer>
+    </div>
+  </body>
+</html>

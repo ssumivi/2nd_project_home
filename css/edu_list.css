@@ -1,0 +1,223 @@
+@charset "utf-8";
+@import url(font.css);
+@import url(all.css);
+.top-banner {
+  position: relative;
+  width: 100%;
+  height: 460px;
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(90deg, #80bcbd 0%, #aad9bb 100%);
+}
+.banner-txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.banner-title {
+  font-family: "GangwonEduPower";
+  font-style: normal;
+  font-size: 2.75rem;
+  line-height: 2.76rem;
+  color: #ffffff;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+.banner-sub {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.625rem;
+  line-height: 1.825rem;
+  color: #f2f2f2;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  padding-top: 30px;
+}
+.pg-navi .inner {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  padding-top: 2%;
+}
+.chevron {
+  position: relative;
+  display: block;
+}
+.chevron::after {
+  content: ">";
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -5px;
+}
+.pg-title {
+  font-family: "GangwonEduPower";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.75rem;
+  margin: 3% 0;
+}
+.area-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 0 5%;
+}
+.area-list-li {
+  position: relative;
+  background: #f2f2f2;
+  border-radius: 35px;
+  font-size: 1.75rem;
+  color: #333333;
+  text-align: center;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+.area-list-li.active {
+  background: #80bcbd;
+  font-weight: 500;
+  color: #ffffff;
+}
+.center-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 0 5%;
+}
+.center-list-li {
+  position: relative;
+  background: #f2f2f2;
+  border-radius: 35px;
+  font-size: 1.625rem;
+  color: #333333;
+  text-align: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  letter-spacing: 1.19px;
+}
+.center-list-li.active {
+  background: #80bcbd;
+  font-weight: 500;
+  color: #ffffff;
+}
+/* lecture list */
+.enroll-select {
+  position: relative;
+  display: block;
+}
+.enroll-list {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: 5%;
+}
+.enroll-list-li {
+  position: relative;
+  display: flex;
+  width: 100%;
+  background-color: #aad9bb;
+  border-radius: 35px;
+  overflow: hidden;
+  box-shadow: 0px 28px 100px rgba(0, 0, 0, 0.12);
+  margin-bottom: 8%;
+}
+
+.enroll-info-left {
+  width: calc(100% / 2);
+  padding: 45px;
+}
+.enroll-info-left img {
+  width: 100%;
+  margin: 0 auto;
+}
+.enroll-info-right {
+  width: calc(100% / 2);
+  padding: 65px;
+  background-color: #ffffff;
+}
+.erinfo-title {
+  font-weight: 700;
+  font-size: 2.375rem;
+  margin-bottom: 12%;
+}
+.study-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 6%;
+}
+.erinfo-subtitle {
+  font-weight: 700;
+  font-size: 2rem;
+  white-space: nowrap;
+}
+.erinfo {
+  white-space: wrap;
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 1.23;
+}
+.study-contac {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 6%;
+  margin: 5% 0 12%;
+}
+.sr-wrap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.submit-bt,
+.review-bt {
+  display: inline-block;
+  width: calc(100% / 2 - 15px);
+  background: #f2f2f2;
+  border-radius: 20px;
+  font-size: 1.75rem;
+  text-align: center;
+  padding: 14px 25px;
+}
+.submit-bt:hover {
+  background-color: #80bcbd;
+  color: #ffffff;
+  font-weight: 600;
+}
+.review-bt:hover {
+  background-color: #e2e2e2;
+}
+.er-pagination {
+  position: relative;
+  display: block;
+  text-align: center;
+}
+#prev-btn,
+#next-btn {
+  width: 45px;
+  height: 45px;
+  background: #f2f2f2;
+  color: #959595;
+  border-radius: 50%;
+  border: 0;
+  margin: 0 25px;
+  cursor: pointer;
+}
+.er-pagination #current-page {
+  padding-right: 7px;
+}
+.er-pagination #total-pages {
+  padding-left: 7px;
+}

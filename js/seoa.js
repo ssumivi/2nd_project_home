@@ -56,23 +56,3 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 //   ================================================================
-document.addEventListener("DOMContentLoaded", function () {
-  // .gangbox 요소에 대한 클릭 이벤트 리스너를 추가합니다.
-  const gangbox = document.querySelector(".gangbox");
-  gangbox.addEventListener("click", function () {
-    // 원하는 URL로 리디렉션합니다.
-    window.location.href = "https://example.com";
-  });
-});
-// ===================================================================
-$(document).ready(function () {
-  $(".topbtn img").click(function () {
-    $("html, body").animate(
-      {
-        scrollTop: 0, // 페이지 최상단으로 스크롤
-      },
-      "slow"
-    ); // "slow"는 애니메이션 속도를 의미하며, 숫자(밀리초)로도 지정할 수 있습니다.
-  });
-});
-// =============================================
