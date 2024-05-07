@@ -1,0 +1,249 @@
+@charset "utf-8";
+#top-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 13%;
+}
+.pg-navi {
+  margin-top: 8%;
+}
+/* 수강신청확인 영역*/
+.enrol-chk {
+  position: relative;
+  display: block;
+}
+.title-box {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  justify-content: center;
+}
+.enrol-chk svg {
+  width: 60px;
+  height: 60px;
+}
+.chk-title {
+  font-family: "GangwonEduPower";
+  font-size: 2.75rem;
+}
+.enrol-chk-bg {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 35px;
+  padding: 65px;
+  box-shadow: 0px 28px 100px rgba(0, 0, 0, 0.12);
+  margin: 7% 0;
+}
+.chk-sub-title {
+  font-weight: 700;
+  font-size: 2.375rem;
+  text-align: center;
+}
+.chk-sub-info-title {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3;
+  text-align: center;
+}
+.info-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8%;
+}
+.info-box-li {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5%;
+}
+.chk-info-title {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.chk-info-data {
+  font-weight: 400;
+  font-size: 2rem;
+}
+.map {
+  width: 60%;
+  height: 29.89vw;
+  margin: 35px auto 0;
+  background-color: aquamarine;
+}
+/* 수강안내 */
+.info-box-last {
+  width: 100%;
+  position: relative;
+  padding: 5% 0 0;
+}
+.info-box-last::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 1px;
+  background-color: #959595;
+}
+.chk-info-detail {
+  font-size: 1.75rem;
+  padding-bottom: 35px;
+  margin: 0 0 0 20%;
+}
+.chk-info-detail a {
+  color: #80bcbd;
+  text-decoration: underline;
+}
+.chk-info-detail:last-child {
+  padding: 0;
+}
+.btn-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  padding: 6% 0 12%;
+}
+#cancel-btn {
+  padding: 12px 0;
+  width: calc(100% / 2 - 75px);
+  box-shadow: 0 0 0 2px #80bcbd inset;
+  border: 0;
+  background-color: #fff;
+  border-radius: 23px;
+  font-size: 2.375rem;
+  color: #80bcbd;
+  text-align: center;
+  cursor: pointer;
+}
+#back-btn {
+  padding: 12px 0;
+  width: calc(100% / 2 - 75px);
+  background: #80bcbd;
+  border-radius: 23px;
+  border: 0;
+  font-size: 2.375rem;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+}
+@media screen and (max-width: 1680px) {
+  .pg-navi {
+    margin-top: 12%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .pg-navi {
+    margin-top: 14%;
+  }
+}
+@media screen and (max-width: 920px) {
+  .pg-navi {
+    margin-top: 19%;
+  }
+  .chk-info-detail {
+    margin: 0 0 0 8%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pg-navi {
+    margin-top: 22%;
+  }
+  .info-box-li {
+    width: 100%;
+  }
+  .chk-info-detail {
+    margin: 0;
+    word-break: keep-all;
+  }
+}
+@media screen and (max-width: 440px) {
+  .pg-navi {
+    margin-top: 25%;
+  }
+  .enrol-chk .inner {
+    padding-top: 0;
+  }
+  .title-box {
+    gap: 20px;
+  }
+  .chk-title {
+    font-size: 2rem;
+  }
+  .chk-sub-title {
+    font-size: 1.9rem;
+  }
+  .enrol-chk svg {
+    width: 25px;
+    height: 25px;
+  }
+  .chk-sub-info-title {
+    font-size: 1.43rem;
+  }
+  .chk-info-title {
+    font-size: 1.6rem;
+  }
+  .chk-info-data {
+    font-size: 1.6rem;
+  }
+  .enrol-chk-bg {
+    padding: 35px;
+  }
+  .info-box-li {
+    padding-bottom: 8%;
+  }
+  .chk-info-detail {
+    line-height: 1.24;
+    font-size: 1.32rem;
+  }
+  .chk-info-detail {
+    padding-bottom: 15px;
+  }
+  .btn-box {
+    gap: 15px;
+  }
+  #cancel-btn,
+  #back-btn {
+    width: calc(100% / 2 - 15px);
+    font-size: 1.7rem;
+    padding: 9px 0;
+    border-radius: 15px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .pg-navi {
+    margin-top: 35%;
+  }
+
+  .info-box-li {
+    padding-bottom: 12%;
+  }
+  #lecture-info{
+    text-align: right;
+    word-break: keep-all;
+    line-height: 1.24;
+    width: 65%;
+  }
+  .enrol-chk-bg {
+    padding: 25px;
+  }
+  .info-box-last {
+    padding-top: 12%;
+  }
+  .chk-info-detail {
+    font-size: 1.58rem;
+  }
+  #cancel-btn,
+  #back-btn {
+    padding: 9px 0;
+  }
+}

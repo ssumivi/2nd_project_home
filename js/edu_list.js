@@ -1,14 +1,4 @@
 window.addEventListener("load", function () {
-  // 헤더 스크롤 이벤트
-  window.addEventListener("scroll", function () {
-    var headerWrap = document.querySelector(".header-wrap");
-    if (window.scrollY > 0) {
-      headerWrap.classList.add("scrolled");
-    } else {
-      headerWrap.classList.remove("scrolled");
-    }
-  });
-
   // 페이지 내비게이션 렌더링
   const pgNaviContainer = document.querySelector(".pg-navi .inner");
   const nowPg = document.title;
@@ -133,7 +123,7 @@ window.addEventListener("load", function () {
   // 각 페이지 당 보여줄 항목 수
   const ITEMS_PER_PAGE = 2;
   // 현재 페이지
-  let currentPage = 1;
+  let currentPage = 1; // 현재 페이지를 1로 초기화합니다.
   const lectureTag = document.getElementById("data-enroll");
 
   // 강의 목록을 특정 페이지에 맞게 렌더링하는 함수
@@ -149,31 +139,136 @@ window.addEventListener("load", function () {
     let html = "";
     pageLectures.forEach((item, idx) => {
       const tag = `
-      <li class="enroll-list-li" id = "${item.number}">
-        <div class="enroll-info-left">
-          <img src="${item.imgSrc}" alt="${item.lecture_title}" />
+    <li class="enroll-list-li" id="${item.number}">
+      <div class="enroll-info-left">
+        <img src="${item.imgSrc}" alt="${item.lecture_title}" />
+      </div>
+      <div class="enroll-info-right">
+        <h2 class="erinfo-title">${item.lecture_title}</h2>
+        <div class="study-info">
+          <h2 class="erinfo-subtitle">교육내용</h2>
+          <p class="erinfo">${item.erinfo}</p>
         </div>
-        <div class="enroll-info-right">
-          <h2 class="erinfo-title">${item.lecture_title}</h2>
-          <div class="study-info">
-            <h2 class="erinfo-subtitle">교육내용</h2>
-            <p class="erinfo">${item.erinfo}</p>
-          </div>
-          <div class="study-contac">
-            <h2 class="erinfo-subtitle">교육문의</h2>
-            <p class="erinfo">전화문의) 1577-XXXX</p>
-          </div>
-          <div class="sr-wrap">
-            <a href="#" class="submit-bt" data-assign = "${item.lecture_title}">수강신청</a>
-            <a href="#" class="review-bt">수강생 후기</a>
-          </div>
+        <div class="study-contac">
+          <h2 class="erinfo-subtitle">교육문의</h2>
+          <p class="erinfo">전화문의) 1577-XXXX</p>
         </div>
-      </li>
-    `;
+        <div class="sr-wrap">
+          <a href="#" class="submit-bt" data-assign="${item.lecture_title}">수강신청</a>
+          <a href="#" class="review-bt">수강생 후기</a>
+        </div>
+      </div>
+    </li>
+  `;
       html += tag;
     });
     lectureTag.innerHTML = html;
   }
+
+  // 페이지 로드 시 초기화
+  window.addEventListener("load", function () {
+    renderLecture(currentPage);
+    updatePagination();
+  });
+
+  // 페이지네이션을 업데이트하는 함수
+  function updatePagination() {
+    const total_pages = Math.ceil(LECTURE_ARR.length / ITEMS_PER_PAGE);
+
+    const pageNumbersContainer = document.getElementById("page-numbers");
+    pageNumbersContainer.innerHTML = ""; // 기존 페이지 번호 초기화
+
+    for (let i = 1; i <= total_pages; i++) {
+      const pageNumber = document.createElement("span");
+      pageNumber.textContent = i;
+      pageNumber.className = "page-number";
+      if (i === currentPage) {
+        pageNumber.classList.add("active-page"); // 활성 페이지 강조
+      }
+      pageNumber.addEventListener("click", function () {
+        currentPage = i;
+        renderLecture(currentPage);
+        updatePagination();
+      });
+      pageNumbersContainer.appendChild(pageNumber);
+    }
+    // 현재 페이지 이동 후 액티브 클래스를 갱신해야 하므로 다시 설정
+    document.querySelectorAll(".page-number").forEach((number, index) => {
+      number.classList.toggle("active-page", index + 1 === currentPage);
+    });
+
+    // 이전 페이지 버튼 업데이트
+    document.getElementById("prev-btn").disabled = currentPage === 1; // 현재 페이지가 1이면 이전 버튼 비활성화
+    // 다음 페이지 버튼 업데이트
+    document.getElementById("next-btn").disabled = currentPage === total_pages;
+  }
+
+  // 이전 페이지로 이동하는 함수
+  function goToPrevPage() {
+    if (currentPage > 1) {
+      currentPage--;
+      renderLecture(currentPage);
+      updatePagination();
+    }
+  }
+
+  // 다음 페이지로 이동하는 함수
+  function goToNextPage() {
+    const total_pages = Math.ceil(LECTURE_ARR.length / ITEMS_PER_PAGE);
+    if (currentPage < total_pages) {
+      currentPage++;
+      renderLecture(currentPage);
+      updatePagination();
+      // 페이지 상단으로 스크롤
+      scrollToSection();
+    }
+  }
+
+  // 특정 섹션으로 스크롤하는 함수
+  function scrollToSection() {
+    const section = document.getElementById("enroll-position");
+    if (section) {
+      // 섹션의 위치를 계산
+      const sectionTop = section.offsetTop;
+      const offsetTop = 70;
+      // 섹션의 위치로 스크롤
+      window.scrollTo({
+        top: sectionTop - offsetTop,
+        behavior: "smooth", // 부드러운 스크롤 적용
+      });
+    }
+  }
+
+  // 이전 페이지 버튼 클릭 이벤트 리스너 등록
+  document.getElementById("prev-btn").addEventListener("click", goToPrevPage);
+  // 다음 페이지 버튼 클릭 이벤트 리스너 등록
+  document.getElementById("next-btn").addEventListener("click", goToNextPage);
+
+  // 페이지 로드 시 초기화
+  window.addEventListener("load", function () {
+    renderLecture(currentPage);
+    updatePagination();
+  });
+
+  // 함수: 센터 목록을 클릭하여 수강신청 페이지로 이동하거나 경고창을 띄우는 함수
+  function handleCenterClick(event) {
+    if (event.target.classList.contains("center-list-li")) {
+      // 센터 목록을 클릭한 경우
+      event.preventDefault(); // 기본 동작(링크 이동) 막기
+    } else if (event.target.classList.contains("submit-bt")) {
+      // 수강신청 버튼을 클릭한 경우
+      if (!document.querySelector(".center-list-li.active")) {
+        // 센터 목록이 비어있는 경우
+        alert("수강 장소를 선택해주세요.");
+        event.preventDefault(); // 기본 동작(링크 이동) 막기
+      } else {
+        window.location.href = "enrolment_pg.html";
+      }
+    }
+  }
+
+  // 클릭 이벤트 리스너 등록
+  document.addEventListener("click", handleCenterClick);
 
   // 데이터 로컬스토리지에 저장
   document.addEventListener("click", function (event) {
@@ -204,9 +299,12 @@ window.addEventListener("load", function () {
 
       // 중복된 값을 방지하기 위해 이미 저장된 데이터와 비교합니다.
       const isDuplicate = storedData.some((item) => {
-        return item.dataValue === newData.dataValue && item.areaValue === newData.areaValue && item.centerValue === newData.centerValue;
+        return (
+          item.dataValue === newData.dataValue &&
+          item.areaValue === newData.areaValue &&
+          item.centerValue === newData.centerValue
+        );
       });
-
 
       // 중복된 값이 아닌 경우에만 데이터를 저장합니다.
       if (!isDuplicate) {
@@ -215,84 +313,20 @@ window.addEventListener("load", function () {
       }
     }
   });
+  const closeAreaToggle = document.querySelector(".area-modal-close");
+  const mobilePopup = document.querySelector(".mobile-popup");
+  const body = document.body;
 
+  // 해상도가 940px 이하일 때만 스크롤 막기
+  if (window.innerWidth <= 940) {
+    body.style.overflow = "hidden"; // 스크롤 막기
+  }
 
-  // 페이지 로드 시 초기 강의 목록 렌더링
-  window.addEventListener("load", function () {
-    renderLecture(currentPage);
-    updatePagination();
+  closeAreaToggle.addEventListener("click", function () {
+    mobilePopup.style.display = "none";
+    // 해상도가 940px 이하일 때만 스크롤 다시 활성화
+    if (window.innerWidth <= 940) {
+      body.style.overflow = "auto"; // 스크롤 다시 활성화
+    }
   });
-
-  // 페이지네이션을 업데이트하는 함수
-  function updatePagination() {
-    const total_pages = Math.ceil(LECTURE_ARR.length / ITEMS_PER_PAGE);
-    // 현재 페이지 번호 표시 업데이트
-    document.getElementById("current-page").textContent = currentPage;
-    // 전체 페이지 번호 표시 업데이트
-    document.getElementById("total-pages").textContent = total_pages;
-    // 이전 페이지 버튼 업데이트
-    document.getElementById("prev-btn").disabled = currentPage === 1;
-    // 다음 페이지 버튼 업데이트
-    document.getElementById("next-btn").disabled = currentPage === total_pages;
-  }
-
-  // 이전 페이지로 이동하는 함수
-  function goToPrevPage() {
-    if (currentPage > 1) {
-      currentPage--;
-      renderLecture(currentPage);
-      updatePagination();
-    }
-  }
-
-  // 다음 페이지로 이동하는 함수
-  function goToNextPage() {
-    const total_pages = Math.ceil(LECTURE_ARR.length / ITEMS_PER_PAGE);
-    if (currentPage < total_pages) {
-      currentPage++;
-      renderLecture(currentPage);
-      updatePagination();
-      // 페이지 상단으로 스크롤
-      scrollToSection();
-    }
-  }
-  // 특정 섹션으로 스크롤하는 함수
-  function scrollToSection() {
-    const section = document.getElementById("enroll-position");
-    if (section) {
-      // 섹션의 위치를 계산
-      const sectionTop = section.offsetTop;
-      const offsetTop = 70;
-      // 섹션의 위치로 스크롤
-      window.scrollTo({
-        top: sectionTop - offsetTop,
-        behavior: "smooth", // 부드러운 스크롤 적용
-      });
-    }
-  }
-
-  // 이전 페이지 버튼 클릭 이벤트 리스너 등록
-  document.getElementById("prev-btn").addEventListener("click", goToPrevPage);
-  // 다음 페이지 버튼 클릭 이벤트 리스너 등록
-  document.getElementById("next-btn").addEventListener("click", goToNextPage);
-
-  // 함수: 센터 목록을 클릭하여 수강신청 페이지로 이동하거나 경고창을 띄우는 함수
-  function handleCenterClick(event) {
-    if (event.target.classList.contains("center-list-li")) {
-      // 센터 목록을 클릭한 경우
-      event.preventDefault(); // 기본 동작(링크 이동) 막기
-    } else if (event.target.classList.contains("submit-bt")) {
-      // 수강신청 버튼을 클릭한 경우
-      if (!document.querySelector(".center-list-li.active")) {
-        // 센터 목록이 비어있는 경우
-        alert("수강 장소를 선택해주세요.");
-        event.preventDefault(); // 기본 동작(링크 이동) 막기
-      } else {
-        window.location.href = "enrolment_pg.html";
-      }
-    }
-  }
-
-  // 클릭 이벤트 리스너 등록
-  document.addEventListener("click", handleCenterClick);
 });

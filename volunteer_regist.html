@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <title>교육과정찾기</title>
+    <title>교육봉사등록</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- favicon -->
@@ -23,8 +23,28 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="icon" href="favicon/KqGP9zKJ.ico" />
+    <!-- meta tag -->
+    <meta name="title" content="노인을 위한 스마트 교육 플랫폼" />
+    <meta name="description" content="노인 분들을 위한 쉽고 편리한 디지털 교육 플랫폼. 스마트폰 사용법부터 온라인 금융 관리까지, 생활에 필요한 다양한 교육 콘텐츠를 제공합니다." />
+    <meta name="keywords" content="노인 교육, 스마트 교육, 디지털 리터러시, 온라인 학습, 노인 대상 스마트폰 교육, 노인을 위한 IT 교육, 노인 생활 지원, 노인 온라인 금융 관리" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="노인 스마트 교육 플랫폼" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="스마트길잡이" />
+    <meta property="og:description" content="모든 연령층을 위한 쉽고 편리한 디지털 교육 플랫폼. 스마트폰 사용법부터 온라인 금융 관리까지, 생활에 필요한 다양한 교육 콘텐츠를 제공합니다." />
+    <meta property="og:image" content="../images/meta.png" />
+    <meta property="og:url" content="https://smartgiljabi-a-c02nmesdi-seoazoas-projects.vercel.app/" />
     <!-- fontawesome css cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- swiper css cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"
+      integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
     <!-- 기본css -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/all.css" />
@@ -32,18 +52,29 @@
     <link rel="stylesheet" href="css/cheun.css" />
     <link rel="stylesheet" href="css/sumin.css" />
     <link rel="stylesheet" href="css/edu_list.css" />
+    <link rel="stylesheet" href="css/enrol.css" />
+    <link rel="stylesheet" href="css/volunteer_regist.css" />
+    <!-- 제이쿼리 cdn -->
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- swiper js cdn -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+      integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- 기본 js cdn -->
     <script src="js/html5shiv.js"></script>
     <!-- <script src="js/prefixfree.min.js"></script> -->
     <script src="js/respond.min.js"></script>
     <script src="js/cheun.js"></script>
-    <script src="js/main-login.js"></script>
-    <script src="js/edu_list.js"></script>
+    <!-- <script src="js/main-login.js"></script> -->
+    <script src="js/volunteer_regist.js"></script>
   </head>
   <body>
     <div class="wrap">
-      <!-- header area -->
+      <!-- header -->
       <!-- 채은영역 -->
       <div class="header-wrap .scrolled">
         <div class="header">
@@ -119,8 +150,8 @@
       <!-- top banner -->
       <section class="top-banner">
         <div class="banner-txt">
-          <span class="banner-title">수강신청</span>
-          <p class="banner-sub">스마트 세상으로의 한걸음, <br class="no-br">스마트 길잡이가 함께합니다.</p>
+          <span class="banner-title">교육봉사자 신청</span>
+          <p class="banner-sub">스마트 세상으로의 한걸음, 스마트 길잡이가 함께합니다.</p>
         </div>
       </section>
       <div class="pg-navi">
@@ -129,46 +160,39 @@
         </div>
       </div>
       <div class="inner">
-        <h2 class="pg-title">교육과정찾기</h2>
+        <h2 class="pg-title">교육봉사자 신청</h2>
       </div>
-      <div id="data-wrap">
-        <div class="mobile-popup">
-          <div class="mobile-menu-title">
-            <h2 class="mt-title">수강지역을 선택해주세요</h2>
+      <!-- regist form -->
+      <form action="#" class="regist-tutor" id="regist-tutor">
+        <div class="inner">
+          <div class="area-selector">
+            <h2 class="box-title">교육봉사를 희망하시는 지역을 선택해주세요.</h2>
+            <p id="area-selec" class="area-selec">지역선택<i class="fa-solid fa-caret-down"></i></p>
+            <ul class="area-ul" id="data-area-selec">
+              <!-- js 출력 -->
+            </ul>
+            <p id="city-selec" class="area-selec">시/구군 선택<i class="fa-solid fa-caret-down" id="city-carrot"></i></p>
+            <ul class="city-ul" id="data-area-detail">
+              <!-- js 출력 -->
+            </ul>
           </div>
-          <div class="scrol-y">
-            <section class="area-select">
-              <div class="inner">
-                <ul class="area-list" id="data-area">
-                  <!-- js data -->
-                </ul>
+          <!-- 로컬스토리지 데이터 저장 (연락처) -->
+          <div class="user-info-box">
+            <div class="input-bg">
+              <h2 class="box-title">성함과 연락처를 작성해주세요.</h2>
+              <p class="sub-title">안심하세요! <br class="br-440"> 전화번호는 유출되지 않습니다</p>
+              <div class="input-box">
+                <label for="volun-name">성함</label><input type="text" id="volun-name" placeholder="홍길동" />
+                <span class="error-message" id="name-error"></span>
+                <br />
+                <label for="volun-mobile">연락처</label><input type="tel" id="volun-mobile" placeholder="01012345678" />
+                <span class="error-message" id="mobile-error"></span>
               </div>
-            </section>
-            <section class="center-select">
-              <div class="inner">
-                <ul class="center-list" id="data-center">
-                  <!-- js data -->
-                </ul>
-              </div>
-            </section>
-            <button class="area-modal-close">수강과목조회하기</button>
+            </div>
+            <button id="volun_btn" class="submit-btn" type="submit">교육봉사신청하기</button>
           </div>
         </div>
-
-        <section class="enroll-select" id="enroll-position">
-          <div class="inner">
-            <ul class="enroll-list" id="data-enroll">
-              <!-- data json -->
-            </ul>
-            <div class="er-pagination">
-              <button id="prev-btn">이전</button>
-              <span id="page-numbers"> </span>
-              <button id="next-btn">다음</button>
-            </div>
-          </div>
-        </section>
-      </div>
-
+      </form>
       <!-- 하단 footer 영역 -->
       <footer class="footer">
         <a href="#" class="youtube-logo">

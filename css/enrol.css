@@ -54,7 +54,7 @@
   text-align: center;
 }
 /* user info box */
-.user-info-box {
+.input-bg {
   width: 100%;
   height: calc(100% / 2 - 50px);
   background-color: #fff;
@@ -105,8 +105,119 @@
   padding: 25px;
   text-align: center;
   margin: 12% auto;
+  cursor: pointer;
 }
 .submit-btn.active {
   background: #80bcbd;
   color: #fff;
+}
+.error-message {
+  display: block;
+  width: 100%;
+  height: 15px;
+  color: red; /* 오류 메시지의 텍스트 색상 설정 */
+  font-size: 12px; /* 오류 메시지의 글꼴 크기 설정 */
+  margin-top: 5px; /* 오류 메시지와 입력란 사이의 간격 설정 */
+  /* background-color: brown; */
+}
+.b-320 {
+  display: none;
+}
+/* #user-chk{
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+.input-box .user-chk{
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #959595;
+  width: 15%;
+} */
+/* 반응형 */
+@media screen and (max-width: 980px) {
+  .inner {
+    max-width: 860px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .inner {
+    max-width: 680px;
+  }
+  .enrol-box {
+    padding: 50px;
+  }
+  .sub-info {
+    line-height: 1.24;
+  }
+}
+@media screen and (max-width: 440px) {
+  .inner {
+    max-width: 360px;
+  }
+  #submit-wrap .inner {
+    padding-top: 0;
+  }
+  .enrol-box {
+    padding: 35px;
+    word-break: keep-all;
+    line-height: 1.24;
+  }
+  .enrol-info {
+    width: 100%;
+    margin: 25px auto;
+    padding: 25px;
+  }
+  .input-bg {
+    padding: 65px 25px;
+    line-height: 1.24;
+  }
+  .box-title {
+    font-size: 2.3rem;
+  }
+  .sub-title {
+    margin-bottom: 25px;
+    font-size: 1.56rem;
+  }
+  .input-box label {
+    text-align: left;
+  }
+  .input-box input {
+    width: calc(100% / 4 * 2.5);
+    height: 10.5vw;
+    margin: 0;
+  }
+  .submit-btn {
+    padding: 10px;
+    border-radius: 20px;
+    width: 45vw;
+  }
+}
+@media screen and (max-width: 340px) {
+  .inner {
+    max-width: 300px;
+  }
+  .enrol-box {
+    padding: 25px 15px;
+  }
+  .box-title {
+    word-break: keep-all;
+  }
+  .b-320{
+    display: block;
+  }
+  .sub-title{
+    line-height: 1.24;
+    margin: 35px 0;
+  }
+  .input-bg {
+    padding: 55px 15px;
+  }
+  .input-box input {
+    height: 11.5vw;
+    padding: 0 15px;
+  }
+  .submit-btn {
+    width: 52vw;
+  }
 }
